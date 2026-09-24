@@ -667,12 +667,15 @@ h1.two-line span {
 .timeline-row {
     display: grid;
     grid-template-columns: 75px 1fr;
-    gap: 14px
+    gap: 14px;
+    align-items: center;
 }
 
 .timeline-year {
     font-weight: 900;
-    color: var(--brand2)
+    color: var(--brand2);
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .form-card {
@@ -1128,7 +1131,7 @@ tr:last-child td {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.6fr .7fr .7fr;
+    grid-template-columns: 1.4fr .7fr .7fr .7fr;
     gap: 30px
 }
 
@@ -2856,4 +2859,66 @@ html.route-dashboard.route-profile .page#dashboard .dash-page[data-dash-page="pr
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow);
+}
+
+.auth-note a:hover,
+.checkrow a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Top to bottom button highlight on hover */
+.top-btn:hover {
+    background: var(--brand) !important;
+    color: #052118 !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(19, 184, 121, 0.4) !important;
+}
+
+/* Eye icon hover effect */
+.fa-eye:hover,
+.fa-eye-slash:hover {
+    color: var(--brand) !important;
+}
+
+/* Dashboard nav bar fixed and aligned on mobile/tab view */
+@media(max-width: 1000px) {
+    .dash-mobilebar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        background: var(--nav) !important;
+        backdrop-filter: blur(18px) !important;
+        border-bottom: 1px solid var(--line) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 12px 16px !important;
+    }
+
+    .dash-mobile-title {
+        flex: 1 !important;
+        text-align: left !important;
+    }
+}
+
+/* 3rd card in grid-3 centering on tablet view without expanding */
+@media(max-width: 1000px) and (min-width: 641px) {
+    .grid-3>*:nth-child(3):last-child {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        width: calc(50% - 15px) !important;
+    }
+}
+
+/* Ensure sidebar slides from the right */
+@media(max-width: 1000px) {
+    .dash-sidebar {
+        left: auto !important;
+        right: 0 !important;
+        transform: translateX(100%) !important;
+    }
+    .dash-sidebar.open {
+        transform: translateX(0) !important;
+    }
 }

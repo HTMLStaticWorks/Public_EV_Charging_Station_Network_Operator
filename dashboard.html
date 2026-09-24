@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html dir="ltr" lang="en" class="route-dashboard route-overview">
 
@@ -27,21 +27,25 @@
     <section class="page active" id="dashboard">
         <div class="dashboard-shell">
             <div class="dash-mobilebar">
-                <button aria-expanded="false" aria-label="Open dashboard menu" class="dash-hamb" id="dashHamb"
-                    type="button"><i class="fa-solid fa-bars"></i></button>
-                <div class="dash-mobile-title"><span class="eyebrow">Driver
-                        dashboard</span><strong>VoltGrid</strong></div>
-                <a aria-label="Open profile" class="dash-avatar" href="#dashboard/profile">A</a>
+                <a class="brand dash-mobile-title" href="index.html" style="justify-content: flex-start; flex: 1; margin: 0; padding-left: 5px; text-decoration: none;">
+                    <span class="logo"><i class="fa-solid fa-bolt"></i></span>
+                    <span>VoltGrid</span>
+                </a>
+                <button aria-expanded="false" aria-label="Open dashboard menu" class="dash-hamb" id="dashHamb" type="button" style="margin-left: 0;"><i class="fa-solid fa-bars"></i></button>
+
+
+
             </div>
             <div class="dashboard-layout">
                 <aside class="dash-sidebar" id="dashSidebar">
-                    <a href="index.html" class="dash-side-brand">
-                        <span class="logo"><i class="fa-solid fa-bolt"></i></span>
-                        <div><strong>VoltGrid</strong><small>Driver Portal</small></div>
-                    </a>
+                    <div class="dash-side-brand" style="display: flex; justify-content: flex-end; padding: 15px; border-bottom: 1px solid var(--line); margin-bottom: 10px;">
+                        <button aria-label="Close dashboard menu" type="button" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text);" onclick="document.getElementById('dashSidebar').classList.remove('open')">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
                     <nav aria-label="Driver dashboard" class="dash-side-nav">
                         <a data-dash-view="overview" href="#dashboard" class="active"><i
-                                class="fa-solid fa-grid-2"></i><span>Overview</span></a>
+                                class="fa-solid fa-house"></i><span>Overview</span></a>
                         <a data-dash-view="chargers" href="#dashboard/chargers"><i
                                 class="fa-solid fa-location-dot"></i><span>Find Chargers</span></a>
                         <a data-dash-view="session" href="#dashboard/session"><i class="fa-solid fa-bolt"></i><span>Live
@@ -424,6 +428,11 @@
 </body>
 
 </html>
+
+
+
+
+
 
 
 

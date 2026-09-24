@@ -27,7 +27,7 @@
 <body>
     <header class="nav" id="siteNav">
         <div class="container nav-inner">
-            <a class="brand" href="index.html"><span class="logo"><i
+            <a class="brand" href="#home1"><span class="logo"><i
                         class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
             <nav aria-label="Main navigation" class="nav-links">
                 <a href="#home1">Home 1</a><a href="#home2">Home 2</a><a href="#about">About</a><a
@@ -51,12 +51,10 @@
     </header>
     <section class="page active" id="login">
         <div class="auth-page">
+            <div class="auth-controls" aria-label="Login page controls"><button class="nav-control" id="authRTL" type="button">RTL</button><button class="nav-control" id="authTheme" type="button"><i class="fa-solid fa-moon"></i></button></div>
             <div class="auth-card" id="authCard">
-                <div class="auth-brand"><a aria-label="VoltGrid home" class="brand auth-logo-link" href="#home1"><span
+                <div class="auth-brand"><a aria-label="VoltGrid home" class="brand auth-logo-link" href="index.html"><span
                             class="logo"><i class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a></div>
-                <div class="auth-controls" aria-label="Login page controls"><button class="nav-control" id="authRTL"
-                        type="button">RTL</button><button class="nav-control" id="authTheme" type="button"><i
-                            class="fa-solid fa-moon"></i></button></div>
                 <div class="center"><span class="eyebrow">Driver portal</span>
                     <h2 style="margin-top:10px;font-size:1.9rem">Sign in to your charging account</h2>
                     <p class="muted">Find nearby chargers, start sessions, manage payments and review billing.</p>
@@ -69,8 +67,7 @@
                     <form id="loginForm">
                         <div class="field"><label>Email</label><input id="loginEmail" placeholder="you@example.com"
                                 required="" type="email" /></div>
-                        <div class="field" style="margin-top:10px"><label>Password</label><input id="loginPass"
-                                placeholder="••••••••" required="" type="password" /></div>
+                        <div class="field" style="margin-top:10px; position:relative;"><label>Password</label><input id="loginPass" placeholder="••••••••" required="" type="password" style="padding-right:40px;" /><i class="fa-solid fa-eye" style="position:absolute; right:14px; bottom:14px; cursor:pointer; color:var(--muted);" onclick="const i=this.previousElementSibling; if(i.type==='password'){i.type='text';this.classList.replace('fa-eye','fa-eye-slash')}else{i.type='password';this.classList.replace('fa-eye-slash','fa-eye')}"></i></div>
                         <div class="checkrow"><label><input type="checkbox" /> Remember me</label><a
                                 href="#login">Forgot password?</a></div><button class="btn primary"
                             style="width:100%;margin-top:8px" type="submit">Login to dashboard <i
@@ -86,6 +83,11 @@
 </body>
 
 </html>
+
+
+
+
+
 
 
 

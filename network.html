@@ -23,6 +23,58 @@
     <script>
         (function () { const h = location.hash.replace(/^#/, ""); if (h.startsWith("dashboard")) { document.documentElement.classList.add("route-dashboard"); const v = h.split("/")[1] || "overview"; if (v) document.documentElement.classList.add("route-" + v) } })();
     </script>
+    <style>
+        .gallery-item figcaption {
+            text-align: center;
+        }
+
+        .network-coverage-card {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 60px;
+            flex-wrap: wrap;
+        }
+
+        .network-coverage-card .col-1 {
+            flex: 0 0 auto;
+        }
+
+        .network-coverage-card .col-2 {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .network-coverage-card .col-3 {
+            flex: 0 0 160px;
+        }
+
+        .network-coverage-card h2 {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .network-coverage-text {
+            width: 140px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        @media(max-width: 1000px) {
+            .network-coverage-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .network-coverage-text {
+                width: auto;
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    </style>
 
 
 </head>
@@ -30,7 +82,7 @@
 <body>
     <header class="nav" id="siteNav">
         <div class="container nav-inner">
-            <a class="brand" href="index.html"><span class="logo"><i
+            <a class="brand" href="#home1"><span class="logo"><i
                         class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
             <nav aria-label="Main navigation" class="nav-links">
                 <a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
@@ -45,9 +97,9 @@
         </div>
         <div class="mobile-menu" id="mobileMenu">
             <a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
-                href="services.html">Services</a><a href="network.html" class="active">Network</a><a href="contact.html">Contact</a><a
-                href="dashboard.html">Dashboard</a><button class="nav-control" id="mobileRTL"
-                type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
+                href="services.html">Services</a><a href="network.html" class="active">Network</a><a
+                href="contact.html">Contact</a><a href="dashboard.html">Dashboard</a><button class="nav-control"
+                id="mobileRTL" type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
                     class="fa-solid fa-moon"></i> Theme</button><a class="nav-control login-nav login-menu-btn"
                 href="login.html">Login</a>
         </div>
@@ -72,7 +124,7 @@
                         <article class="card media-card reveal"><img
                                 alt="Outdoor electric vehicle charging station hardware" loading="lazy"
                                 src="https://images.pexels.com/photos/33083244/pexels-photo-33083244.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
-                            <div class="media-copy"><span class="tag">Hardware</span>
+                            <div class="media-copy" style="text-align: center;"><span class="tag">Hardware</span>
                                 <h3>Connector details</h3>
                                 <p class="muted">Identify charging hardware and connector compatibility before starting
                                     a session.</p>
@@ -81,7 +133,7 @@
                         <article class="card media-card reveal"><img
                                 alt="Modern electric vehicle charging station outdoors" loading="lazy"
                                 src="https://images.pexels.com/photos/31813752/pexels-photo-31813752.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
-                            <div class="media-copy"><span class="tag">Availability</span>
+                            <div class="media-copy" style="text-align: center;"><span class="tag">Availability</span>
                                 <h3>Open charging bays</h3>
                                 <p class="muted">Check available bays and charging capacity so you can choose a
                                     practical stop.</p>
@@ -90,7 +142,7 @@
                         <article class="card media-card reveal"><img
                                 alt="Electric vehicle charging station outside a destination" loading="lazy"
                                 src="https://images.pexels.com/photos/31538378/pexels-photo-31538378.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
-                            <div class="media-copy"><span class="tag">Destination</span>
+                            <div class="media-copy" style="text-align: center;"><span class="tag">Destination</span>
                                 <h3>Charging where you go</h3>
                                 <p class="muted">Find public chargers near shopping, travel and everyday destinations.
                                 </p>
@@ -103,8 +155,7 @@
                 <div class="container split">
                     <div class="img-box reveal"><img alt="Electric car actively charging at a station" loading="lazy"
                             src="https://images.pexels.com/photos/36339137/pexels-photo-36339137.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
-                        <div class="image-note">Image shows an electric car connected to a public charger, representing
-                            an active charging session.</div>
+
                     </div>
                     <div class="reveal"><span class="eyebrow">Power choices</span>
                         <h2 style="margin-top:10px">Compare charging speed before you connect</h2>
@@ -128,27 +179,35 @@
                         <p>The network experience keeps station discovery and live session information connected.</p>
                     </div>
                     <div class="grid-3">
-                        <article class="card emoji-card reveal">
-                            <div class="emoji">📍</div>
+                        <article class="card reveal"
+                            style="display: flex; gap: 15px; align-items: flex-start; text-align: left;">
+                            <div class="icon-box" style="margin-bottom: 0;"><i class="fa-solid fa-location-dot"></i>
+                            </div>
                             <div>
-                                <h3>Nearby first</h3>
-                                <p class="muted">Location-led discovery surfaces practical charging options around the
+                                <h3 style="margin-top:0;">Nearby first</h3>
+                                <p class="muted" style="margin-bottom:0;">Location-led discovery surfaces practical
+                                    charging options around the
                                     driver's route.</p>
                             </div>
                         </article>
-                        <article class="card emoji-card reveal">
-                            <div class="emoji">⚡</div>
+                        <article class="card reveal"
+                            style="display: flex; gap: 15px; align-items: flex-start; text-align: left;">
+                            <div class="icon-box" style="margin-bottom: 0;"><i class="fa-solid fa-bolt"></i></div>
                             <div>
-                                <h3>Power visible</h3>
-                                <p class="muted">Charging speed and connector information stay visible before the
+                                <h3 style="margin-top:0;">Power visible</h3>
+                                <p class="muted" style="margin-bottom:0;">Charging speed and connector information stay
+                                    visible before the
                                     session begins.</p>
                             </div>
                         </article>
-                        <article class="card emoji-card reveal">
-                            <div class="emoji">🔋</div>
+                        <article class="card reveal"
+                            style="display: flex; gap: 15px; align-items: flex-start; text-align: left;">
+                            <div class="icon-box" style="margin-bottom: 0;"><i class="fa-solid fa-battery-half"></i>
+                            </div>
                             <div>
-                                <h3>Progress clear</h3>
-                                <p class="muted">The dashboard keeps energy, battery progress, remaining time and cost
+                                <h3 style="margin-top:0;">Progress clear</h3>
+                                <p class="muted" style="margin-bottom:0;">The dashboard keeps energy, battery progress,
+                                    remaining time and cost
                                     easy to read.</p>
                             </div>
                         </article>
@@ -157,22 +216,16 @@
             </section>
             <section class="section">
                 <div class="container">
-                    <div class="grid-2">
-                        <article class="card reveal"><span class="eyebrow">Network coverage</span>
-                            <h2 style="margin-top:10px">A public charging layer for everyday mobility</h2>
-                            <p class="muted">The concept connects stations across urban areas, travel corridors and
-                                destination locations while keeping the driver journey consistent.</p>
-                            <div class="stats" style="margin-top:15px">
-                                <div class="stat"><strong>24/7</strong><span>Access</span></div>
-                                <div class="stat"><strong>150 kW+</strong><span>Fast options</span></div>
-                            </div>
-                        </article>
-                        <div class="img-box reveal"><img alt="Modern public electric vehicle charging station outdoors"
-                                loading="lazy"
-                                src="https://images.pexels.com/photos/31943852/pexels-photo-31943852.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
-                            <div class="image-note">Image shows a modern outdoor public charging installation built for
-                                electric mobility.</div>
+                    <div class="card reveal network-coverage-card">
+                        <div class="col-1" style="text-align: center;">
+                            <span class="eyebrow"
+                                style="background: var(--surface); border: 1px solid var(--line); color: var(--brand2); border-radius: 20px; padding: 10px 20px; font-weight: bold; margin-bottom: 0;">Network
+                                coverage</span>
                         </div>
+                        <div class="col-2">
+                            <h2>A public charging layer for everyday mobility</h2>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -241,7 +294,8 @@
             </div>
             <div>
                 <h3>Legal</h3>
-                <p><a href="#">Privacy Policy</a><br /><a href="#">Terms of Service</a><br /><a href="#">Cookie Policy</a></p>
+                <p><a href="#">Privacy Policy</a><br /><a href="#">Terms of Service</a><br /><a href="#">Cookie
+                        Policy</a></p>
             </div>
         </div>
         <div class="container center"
@@ -254,5 +308,3 @@
 </body>
 
 </html>
-
-
