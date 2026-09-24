@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#08130f" name="theme-color" />
+    <meta
+        content="VoltGrid public EV charging network — discover nearby chargers, start and track charging sessions, manage payment methods and review billing."
+        name="description" />
+    <title>VoltGrid — Public EV Charging Network</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313b879'/%3E%3Cpath d='M35 8 17 36h13l-3 20 20-29H34z' fill='%23052118'/%3E%3C/svg%3E"
+        rel="icon" />
+    <script>
+        (function () { const h = location.hash.replace(/^#/, ""); if (h.startsWith("dashboard")) { document.documentElement.classList.add("route-dashboard"); const v = h.split("/")[1] || "overview"; if (v) document.documentElement.classList.add("route-" + v) } })();
+    </script>
+</head>
+
+<body>
+    <header class="nav" id="siteNav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html"><span class="logo"><i
+                        class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+            <nav aria-label="Main navigation" class="nav-links">
+                <a href="#home1">Home 1</a><a href="#home2">Home 2</a><a href="#about">About</a><a
+                    href="#services">Services</a><a href="#network">Network</a><a href="#contact">Contact</a><a
+                    href="#dashboard">Dashboard</a>
+            </nav>
+            <div class="nav-actions"><button aria-label="Toggle RTL" class="nav-control" id="rtlBtn"
+                    type="button">RTL</button><button aria-label="Change theme" class="nav-control" id="themeBtn"
+                    type="button"><i class="fa-solid fa-moon"></i></button><a class="nav-control login-nav"
+                    href="#login">Login</a><button aria-expanded="false" aria-label="Open menu" class="hamb"
+                    id="hambBtn" type="button"><i class="fa-solid fa-bars"></i></button></div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home1">Home 1</a><a href="#home2">Home 2</a><a href="#about">About</a><a
+                href="#services">Services</a><a href="#network">Network</a><a href="#contact">Contact</a><a
+                href="#dashboard">Dashboard</a><button class="nav-control" id="mobileRTL"
+                type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
+                    class="fa-solid fa-moon"></i> Theme</button><a class="nav-control login-nav login-menu-btn"
+                href="#login">Login</a>
+        </div>
+    </header>
+    <section class="page active" id="login">
+        <div class="auth-page">
+            <div class="auth-card" id="authCard">
+                <div class="auth-brand"><a aria-label="VoltGrid home" class="brand auth-logo-link" href="#home1"><span
+                            class="logo"><i class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a></div>
+                <div class="auth-controls" aria-label="Login page controls"><button class="nav-control" id="authRTL"
+                        type="button">RTL</button><button class="nav-control" id="authTheme" type="button"><i
+                            class="fa-solid fa-moon"></i></button></div>
+                <div class="center"><span class="eyebrow">Driver portal</span>
+                    <h2 style="margin-top:10px;font-size:1.9rem">Sign in to your charging account</h2>
+                    <p class="muted">Find nearby chargers, start sessions, manage payments and review billing.</p>
+                </div>
+                <div class="socials"><button class="social" type="button"><i class="fa-brands fa-google"></i>
+                        Google</button><button class="social" type="button"><i class="fa-brands fa-apple"></i>
+                        Apple</button></div>
+                <div class="login-panel">
+                    <div class="auth-sep">or continue with email</div>
+                    <form id="loginForm">
+                        <div class="field"><label>Email</label><input id="loginEmail" placeholder="you@example.com"
+                                required="" type="email" /></div>
+                        <div class="field" style="margin-top:10px"><label>Password</label><input id="loginPass"
+                                placeholder="••••••••" required="" type="password" /></div>
+                        <div class="checkrow"><label><input type="checkbox" /> Remember me</label><a
+                                href="#login">Forgot password?</a></div><button class="btn primary"
+                            style="width:100%;margin-top:8px" type="submit">Login to dashboard <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <p class="auth-note">New driver? <a href="signup.html" >Create an account</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+

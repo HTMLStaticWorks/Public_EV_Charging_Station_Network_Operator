@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#08130f" name="theme-color" />
+    <meta
+        content="VoltGrid public EV charging network — discover nearby chargers, start and track charging sessions, manage payment methods and review billing."
+        name="description" />
+    <title>VoltGrid — Public EV Charging Network</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313b879'/%3E%3Cpath d='M35 8 17 36h13l-3 20 20-29H34z' fill='%23052118'/%3E%3C/svg%3E"
+        rel="icon" />
+    <script>
+        (function () { const h = location.hash.replace(/^#/, ""); if (h.startsWith("dashboard")) { document.documentElement.classList.add("route-dashboard"); const v = h.split("/")[1] || "overview"; if (v) document.documentElement.classList.add("route-" + v) } })();
+    </script>
+
+
+</head>
+
+<body>
+    <header class="nav" id="siteNav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html"><span class="logo"><i
+                        class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+            <nav aria-label="Main navigation" class="nav-links">
+                <a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
+                    href="services.html">Services</a><a href="network.html">Network</a><a
+                    href="contact.html" class="active">Contact</a><a href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="nav-actions"><button aria-label="Toggle RTL" class="nav-control" id="rtlBtn"
+                    type="button">RTL</button><button aria-label="Change theme" class="nav-control" id="themeBtn"
+                    type="button"><i class="fa-solid fa-moon"></i></button><a class="nav-control login-nav"
+                    href="login.html">Login</a><button aria-expanded="false" aria-label="Open menu" class="hamb"
+                    id="hambBtn" type="button"><i class="fa-solid fa-bars"></i></button></div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
+                href="services.html">Services</a><a href="network.html">Network</a><a href="contact.html" class="active">Contact</a><a
+                href="dashboard.html">Dashboard</a><button class="nav-control" id="mobileRTL"
+                type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
+                    class="fa-solid fa-moon"></i> Theme</button><a class="nav-control login-nav login-menu-btn"
+                href="login.html">Login</a>
+        </div>
+    </header>
+    <main>
+        <section class="page" id="contact">
+            <section class="page-hero no-h1-buttons"
+                style="background-image:url('https://images.pexels.com/photos/35736783/pexels-photo-35736783.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840')">
+                <div><span class="eyebrow">Contact &amp; support</span>
+                    <h1>We're Here When You Need a Charge</h1>
+                    <p class="lead">Questions about stations, charging sessions, payments or driver access? Contact the
+                        network team.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container contact-grid">
+                    <div class="contact-list">
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📧</div>
+                            <div><strong>Email support</strong>
+                                <div class="muted">support@voltgrid.example</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📞</div>
+                            <div><strong>Phone</strong>
+                                <div class="muted">+91 40 4567 8900</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📍</div>
+                            <div><strong>Network office</strong>
+                                <div class="muted">Hyderabad, Telangana, India</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">⚡</div>
+                            <div><strong>Driver support</strong>
+                                <div class="muted">Available for station, session and billing questions.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card form-card reveal">
+                        <div class="section-head" style="margin-bottom:15px"><span class="eyebrow">Send a message</span>
+                            <h2>Contact the charging team</h2>
+                        </div>
+                        <form id="contactForm">
+                            <div class="form-grid">
+                                <div class="field"><label>Name</label><input placeholder="Your name" required="" />
+                                </div>
+                                <div class="field"><label>Email</label><input placeholder="you@example.com" required=""
+                                        type="email" /></div>
+                                <div class="field"><label>Topic</label><select>
+                                        <option>Station availability</option>
+                                        <option>Charging session</option>
+                                        <option>Payment / billing</option>
+                                        <option>Driver login</option>
+                                        <option>Other</option>
+                                    </select></div>
+                                <div class="field"><label>Phone</label><input placeholder="Optional" /></div>
+                                <div class="field full"><label>Message</label><textarea
+                                        placeholder="Tell us how we can help..." required=""></textarea></div>
+                            </div><button class="btn primary" style="width:100%;margin-top:13px" type="submit">Send
+                                message <i class="fa-solid fa-paper-plane"></i></button>
+                            <p class="status hide" id="formMsg" style="margin-top:12px">Message captured in this demo.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container"><iframe class="map reveal" loading="lazy"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=78.3600%2C17.3400%2C78.5600%2C17.5200&amp;layer=mapnik&amp;marker=17.4400%2C78.4600"
+                        title="Hyderabad map"></iframe></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer" id="siteFooter">
+        <div class="container footer-grid">
+            <div><a class="brand" href="#home1"><span class="logo"><i
+                            class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+                <p>VoltGrid is a public EV charging network concept focused on fast station discovery, simple charging
+                    sessions, transparent payments and organized billing for drivers.</p>
+                <div class="social-row"><a aria-label="Facebook" class="social-icon fb" href="https://www.facebook.com/"
+                        rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a
+                        aria-label="Instagram" class="social-icon ig" href="https://www.instagram.com/" rel="noopener"
+                        target="_blank"><i class="fa-brands fa-instagram"></i></a><a aria-label="LinkedIn"
+                        class="social-icon li" href="https://www.linkedin.com/" rel="noopener" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a><a aria-label="X" class="social-icon x"
+                        href="https://x.com/" rel="noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="#home1">Home 1</a><br /><a href="#home2">Home 2</a><br /><a href="#about">About</a><br /><a
+                        href="#services">Services</a></p>
+            </div>
+            <div>
+                <h3>Driver</h3>
+                <p><a href="#login">Login</a><br /><a href="#dashboard">Dashboard</a><br /><a
+                        href="#contact">Support</a>
+                </p>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <p><a href="#">Privacy Policy</a><br /><a href="#">Terms of Service</a><br /><a href="#">Cookie Policy</a></p>
+            </div>
+        </div>
+        <div class="container center"
+            style="border-top:1px solid var(--line);margin-top:22px;padding-top:16px;color:var(--muted);font-size:.78rem">
+            © 2026 VoltGrid. Demo website — connect your production authentication, station APIs and payment gateway
+            before launch.</div>
+    </footer>
+    <button aria-label="Move to top" class="top-btn" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+

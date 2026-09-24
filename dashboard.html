@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en" class="route-dashboard route-overview">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#08130f" name="theme-color" />
+    <meta
+        content="VoltGrid public EV charging network — discover nearby chargers, start and track charging sessions, manage payment methods and review billing."
+        name="description" />
+    <title>VoltGrid — Public EV Charging Network</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313b879'/%3E%3Cpath d='M35 8 17 36h13l-3 20 20-29H34z' fill='%23052118'/%3E%3C/svg%3E"
+        rel="icon" />
+
+</head>
+
+<body>
+    <section class="page active" id="dashboard">
+        <div class="dashboard-shell">
+            <div class="dash-mobilebar">
+                <button aria-expanded="false" aria-label="Open dashboard menu" class="dash-hamb" id="dashHamb"
+                    type="button"><i class="fa-solid fa-bars"></i></button>
+                <div class="dash-mobile-title"><span class="eyebrow">Driver
+                        dashboard</span><strong>VoltGrid</strong></div>
+                <a aria-label="Open profile" class="dash-avatar" href="#dashboard/profile">A</a>
+            </div>
+            <div class="dashboard-layout">
+                <aside class="dash-sidebar" id="dashSidebar">
+                    <a href="index.html" class="dash-side-brand">
+                        <span class="logo"><i class="fa-solid fa-bolt"></i></span>
+                        <div><strong>VoltGrid</strong><small>Driver Portal</small></div>
+                    </a>
+                    <nav aria-label="Driver dashboard" class="dash-side-nav">
+                        <a data-dash-view="overview" href="#dashboard" class="active"><i
+                                class="fa-solid fa-grid-2"></i><span>Overview</span></a>
+                        <a data-dash-view="chargers" href="#dashboard/chargers"><i
+                                class="fa-solid fa-location-dot"></i><span>Find Chargers</span></a>
+                        <a data-dash-view="session" href="#dashboard/session"><i class="fa-solid fa-bolt"></i><span>Live
+                                Session</span></a>
+                        <a data-dash-view="history" href="#dashboard/history"><i
+                                class="fa-solid fa-clock-rotate-left"></i><span>Charging History</span></a>
+                        <a data-dash-view="payments" href="#dashboard/payments"><i
+                                class="fa-brands fa-cc-visa"></i><span>Payment Methods</span></a>
+                        <a data-dash-view="billing" href="#dashboard/billing"><i
+                                class="fa-solid fa-file-invoice-dollar"></i><span>Billing</span></a>
+                        <a data-dash-view="profile" href="#dashboard/profile"><i
+                                class="fa-solid fa-car"></i><span>Vehicle &amp; Profile</span></a>
+                    </nav>
+                    <div class="dash-side-tools">
+                        <button id="dashThemeBtn" type="button"><i
+                                class="fa-solid fa-moon"></i><span>Theme</span></button>
+                        <button id="dashRTLBtn" type="button"><i
+                                class="fa-solid fa-right-left"></i><span>RTL</span></button>
+                        <button class="logout" id="dashLogout" type="button"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></button>
+                    </div>
+                </aside>
+                <div class="dash-overlay" id="dashOverlay"></div>
+                <main class="dashboard-content">
+                    <div class="dash-page active" data-dash-page="overview">
+                        <div class="dash-top improved">
+                            <div>
+                                <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Driver dashboard</span>
+                                <h1>Welcome back, Arjun</h1>
+                                <p class="muted">Find a nearby charger, manage an active session, review your
+                                    charging history, and keep payments and billing in one place.</p>
+                            </div>
+                            <div class="dash-actions"><a class="btn secondary" href="#contact"><i
+                                        class="fa-regular fa-circle-question"></i> Support</a></div>
+                        </div>
+                        <div class="dash-grid">
+                            <article class="card dash-stat">
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div><span
+                                    class="muted">Nearby stations</span>
+                                <div class="metric">18</div><span class="status">Within 5 km</span>
+                            </article>
+                            <article class="card dash-stat">
+                                <div class="icon-box"><i class="fa-solid fa-bolt"></i></div><span class="muted">Active
+                                    session</span>
+                                <div class="metric">67%</div><span class="status">Charging now</span>
+                            </article>
+                            <article class="card dash-stat">
+                                <div class="icon-box"><i class="fa-solid fa-battery-three-quarters"></i></div><span
+                                    class="muted">Energy this month</span>
+                                <div class="metric">214 kWh</div><span class="status">+12%</span>
+                            </article>
+                            <article class="card dash-stat">
+                                <div class="icon-box"><i class="fa-solid fa-wallet"></i></div><span
+                                    class="muted">Current balance</span>
+                                <div class="metric">₹1,840</div><span class="status">Available</span>
+                            </article>
+                        </div>
+                        <div class="dashboard-feature-grid">
+                            <article class="card quick-map-card">
+                                <div class="kpi">
+                                    <div><span class="eyebrow">Station discovery</span>
+                                        <h2>Find your next charger</h2>
+                                    </div><a class="btn primary" href="#dashboard/chargers">Explore stations</a>
+                                </div>
+                                <div class="map-preview">
+                                    <div class="map-grid"></div><span class="map-pin p1"><i
+                                            class="fa-solid fa-bolt"></i></span><span class="map-pin p2"><i
+                                            class="fa-solid fa-bolt"></i></span><span class="map-pin p3"><i
+                                            class="fa-solid fa-bolt"></i></span>
+                                    <div class="map-label"><strong>18 stations nearby</strong><small>Live
+                                            availability &amp; connector types</small></div>
+                                </div>
+                            </article>
+                            <article class="card session-preview">
+                                <span class="eyebrow">Live charging session</span>
+                                <h2>Central Mobility Hub</h2>
+                                <p class="muted">CCS2 · Bay 04 · Started 10:18 AM</p>
+                                <div class="progress"><span></span></div>
+                                <div class="kpi"><strong>67%</strong><span>Target 80%</span></div>
+                                <div class="session-grid">
+                                    <div class="value-label"><strong>42.6 kWh</strong><span>Energy</span></div>
+                                    <div class="value-label"><strong>18 min</strong><span>Remaining</span></div>
+                                    <div class="value-label"><strong>₹312</strong><span>Current cost</span></div>
+                                </div><a class="btn secondary full-btn" href="#dashboard/session">Open live
+                                    session</a>
+                            </article>
+                        </div>
+                        <div class="grid-3 dash-lower-grid">
+                            <a class="card dash-action-card" href="#dashboard/history"><i
+                                    class="fa-solid fa-clock-rotate-left"></i><strong>Review
+                                    history</strong><span>See every completed charging session.</span></a>
+                            <a class="card dash-action-card" href="#dashboard/payments"><i
+                                    class="fa-solid fa-credit-card"></i><strong>Manage payments</strong><span>Update
+                                    your saved payment methods.</span></a>
+                            <a class="card dash-action-card" href="#dashboard/billing"><i
+                                    class="fa-solid fa-file-invoice"></i><strong>Review billing</strong><span>Open
+                                    invoices and monthly charging spend.</span></a>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="chargers">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Station discovery</span>
+                                <h1>Find Chargers</h1>
+                                <p class="muted">Locate public charging stations, compare connectors, charging
+                                    speeds, availability and pricing before you arrive.</p>
+                            </div><button class="btn primary" onclick="alert('Demo: map view opened')" type="button"><i
+                                    class="fa-solid fa-map"></i> Map view</button>
+                        </div>
+                        <div class="filter-row"><button class="filter active">Nearby</button><button class="filter">DC
+                                Fast</button><button class="filter">CCS2</button><button class="filter">Available
+                                now</button></div>
+                        <div class="station-grid">
+                            <article class="card station-card"><img
+                                    alt="Modern EV charging station with digital charger display" loading="lazy"
+                                    src="https://images.pexels.com/photos/34800670/pexels-photo-34800670.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840">
+                                <div class="station-card-body"><span class="status">8 bays available</span>
+                                    <h3>Central Mobility Hub</h3>
+                                    <p class="muted">0.8 km · DC fast · CCS2 · up to 180 kW</p>
+                                    <div class="station-meta"><strong>₹14/kWh</strong><span>Open 24/7</span></div>
+                                    <button class="btn primary full-btn"
+                                        onclick="startDemo('Central Mobility Hub')">Start charging</button>
+                                </div>
+                            </article>
+                            <article class="card station-card"><img alt="Public EV charging point for electric mobility"
+                                    loading="lazy"
+                                    src="https://images.pexels.com/photos/34800675/pexels-photo-34800675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840">
+                                <div class="station-card-body"><span class="status">5 bays available</span>
+                                    <h3>Metro Green Charge</h3>
+                                    <p class="muted">1.6 km · CCS2 · AC + DC · up to 120 kW</p>
+                                    <div class="station-meta"><strong>₹12/kWh</strong><span>Open 24/7</span></div>
+                                    <button class="btn primary full-btn" onclick="startDemo('Metro Green Charge')">Start
+                                        charging</button>
+                                </div>
+                            </article>
+                            <article class="card station-card"><img
+                                    alt="Outdoor electric vehicle charging point near a destination" loading="lazy"
+                                    src="https://images.pexels.com/photos/9800009/pexels-photo-9800009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840">
+                                <div class="station-card-body"><span class="status">3 bays available</span>
+                                    <h3>Airport Express Charge</h3>
+                                    <p class="muted">4.1 km · CCS2 · 150 kW · Route charging</p>
+                                    <div class="station-meta"><strong>₹16/kWh</strong><span>Open 24/7</span></div>
+                                    <button class="btn primary full-btn"
+                                        onclick="startDemo('Airport Express Charge')">Start charging</button>
+                                </div>
+                            </article>
+                            <article class="card station-card"><img
+                                    alt="Electric car actively charging at a public charging station" loading="lazy"
+                                    src="https://images.pexels.com/photos/36339137/pexels-photo-36339137.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840">
+                                <div class="station-card-body"><span class="status">2 bays available</span>
+                                    <h3>Greenway Plaza</h3>
+                                    <p class="muted">5.2 km · CCS2 · 180 kW · Destination</p>
+                                    <div class="station-meta"><strong>₹13/kWh</strong><span>Open until 11 PM</span>
+                                    </div><button class="btn primary full-btn"
+                                        onclick="startDemo('Greenway Plaza')">Start charging</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="session">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Charging control</span>
+                                <h1>Live Charging Session</h1>
+                                <p class="muted">Track battery progress, delivered energy, time remaining and the
+                                    current session cost.</p>
+                            </div><span class="status big-status">Charging</span>
+                        </div>
+                        <div class="live-session-layout">
+                            <article class="session live-session-card"><span class="eyebrow">Central Mobility Hub ·
+                                    Bay 04</span>
+                                <h2>Charging at 67%</h2>
+                                <p class="muted">CCS2 · Started 10:18 AM · Target 80%</p>
+                                <div class="big-progress"><span></span></div>
+                                <div class="session-grid">
+                                    <div class="value-label"><strong>42.6 kWh</strong><span>Energy delivered</span>
+                                    </div>
+                                    <div class="value-label"><strong>18 min</strong><span>Estimated remaining</span>
+                                    </div>
+                                    <div class="value-label"><strong>₹312</strong><span>Current cost</span></div>
+                                </div><button class="btn stop-btn"
+                                    onclick="alert('Demo: stop charging confirmation')"><i class="fa-solid fa-stop"></i>
+                                    Stop session</button>
+                            </article>
+                            <article class="card"><span class="eyebrow">Session details</span>
+                                <div class="detail-list">
+                                    <div><span>Charger</span><strong>VG-CCS-004</strong></div>
+                                    <div><span>Power</span><strong>126 kW</strong></div>
+                                    <div><span>Battery</span><strong>67% → 80%</strong></div>
+                                    <div><span>Estimated total</span><strong>₹374</strong></div>
+                                    <div><span>Vehicle</span><strong>Volt E2</strong></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="history">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Past sessions</span>
+                                <h1>Charging History</h1>
+                                <p class="muted">Review completed charging sessions, energy delivered, duration and
+                                    amount paid.</p>
+                            </div><button class="btn secondary" type="button"><i class="fa-solid fa-download"></i>
+                                Export</button>
+                        </div>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Station</th>
+                                        <th>Energy</th>
+                                        <th>Duration</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>24 Sep 2026</td>
+                                        <td>Central Mobility Hub</td>
+                                        <td>42.6 kWh</td>
+                                        <td>31 min</td>
+                                        <td>₹312</td>
+                                        <td><span class="status">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21 Sep 2026</td>
+                                        <td>Metro Green Charge</td>
+                                        <td>28.2 kWh</td>
+                                        <td>24 min</td>
+                                        <td>₹226</td>
+                                        <td><span class="status">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>18 Sep 2026</td>
+                                        <td>Airport Express Charge</td>
+                                        <td>51.4 kWh</td>
+                                        <td>39 min</td>
+                                        <td>₹742</td>
+                                        <td><span class="status">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14 Sep 2026</td>
+                                        <td>Greenway Plaza</td>
+                                        <td>35.1 kWh</td>
+                                        <td>29 min</td>
+                                        <td>₹456</td>
+                                        <td><span class="status">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>09 Sep 2026</td>
+                                        <td>Central Mobility Hub</td>
+                                        <td>31.8 kWh</td>
+                                        <td>26 min</td>
+                                        <td>₹250</td>
+                                        <td><span class="status">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid-3 history-summary">
+                            <article class="card"><span class="muted">September sessions</span>
+                                <div class="metric">9</div>
+                            </article>
+                            <article class="card"><span class="muted">Energy delivered</span>
+                                <div class="metric">214 kWh</div>
+                            </article>
+                            <article class="card"><span class="muted">September spend</span>
+                                <div class="metric">₹2,184</div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="payments">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Secure checkout</span>
+                                <h1>Payment Methods</h1>
+                                <p class="muted">Manage the payment methods used for charging sessions and automatic
+                                    billing.</p>
+                            </div><button class="btn primary" onclick="alert('Demo: add payment method')"
+                                type="button"><i class="fa-solid fa-plus"></i> Add method</button>
+                        </div>
+                        <div class="payment-page-grid">
+                            <article class="card payment-card featured">
+                                <div class="payment-card-top"><span class="cardbrand visa">VISA</span><span
+                                        class="status">Default</span></div><strong>•••• 4242</strong><span
+                                    class="muted">Arjun Kumar · Expires 09/29</span>
+                                <div class="payment-actions"><button class="btn secondary"
+                                        type="button">Edit</button><button class="btn secondary"
+                                        type="button">Remove</button></div>
+                            </article>
+                            <article class="card payment-card">
+                                <div class="payment-card-top"><span class="cardbrand upi">UPI</span><span
+                                        class="tag">Instant</span></div><strong>arjun@upi</strong><span
+                                    class="muted">Preferred UPI payment</span>
+                                <div class="payment-actions"><button class="btn secondary"
+                                        type="button">Edit</button><button class="btn secondary"
+                                        type="button">Remove</button></div>
+                            </article>
+                            <article class="card add-payment"><i class="fa-solid fa-plus"></i><strong>Add another
+                                    payment method</strong><span class="muted">Visa, Mastercard, UPI and supported
+                                    digital payments.</span></article>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="billing">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Statements &amp; invoices</span>
+                                <h1>Billing</h1>
+                                <p class="muted">Review monthly charging spend, invoices and payment status in one
+                                    place.</p>
+                            </div><button class="btn secondary" type="button"><i class="fa-solid fa-download"></i>
+                                Download statement</button>
+                        </div>
+                        <div class="billing-overview">
+                            <article class="card"><span class="muted">September total</span>
+                                <div class="metric">₹2,184</div><span class="status">9 charging sessions</span>
+                            </article>
+                            <article class="card"><span class="muted">Average session</span>
+                                <div class="metric">₹243</div><span class="muted">Per completed session</span>
+                            </article>
+                            <article class="card"><span class="muted">Energy cost</span>
+                                <div class="metric">₹10.21</div><span class="muted">Average per kWh</span>
+                            </article>
+                        </div>
+                        <div class="card invoice-card">
+                            <div class="kpi">
+                                <div><span class="eyebrow">Recent invoices</span>
+                                    <h2>Monthly billing history</h2>
+                                </div><span class="status">Paid</span>
+                            </div>
+                            <div class="invoice-list">
+                                <div class="invoice">
+                                    <div><strong>September 2026</strong><span>9 sessions · 214 kWh</span></div>
+                                    <strong>₹2,184</strong><button class="btn secondary">View</button>
+                                </div>
+                                <div class="invoice">
+                                    <div><strong>August 2026</strong><span>11 sessions · 260 kWh</span></div>
+                                    <strong>₹2,760</strong><button class="btn secondary">View</button>
+                                </div>
+                                <div class="invoice">
+                                    <div><strong>July 2026</strong><span>7 sessions · 184 kWh</span></div>
+                                    <strong>₹1,940</strong><button class="btn secondary">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-page" data-dash-page="profile">
+                        <div class="dash-page-head">
+                            <div><span class="eyebrow">Driver settings</span>
+                                <h1>Vehicle &amp; Profile</h1>
+                                <p class="muted">Keep your driver details and vehicle charging preferences ready for
+                                    the next session.</p>
+                            </div>
+                        </div>
+                        <div class="grid-2">
+                            <article class="card profile-card">
+                                <div class="profile-icon"><i class="fa-solid fa-user"></i></div>
+                                <h2>Arjun Kumar</h2>
+                                <p class="muted">arjun@example.com</p>
+                                <div class="detail-list">
+                                    <div><span>Preferred charging target</span><strong>80%</strong></div>
+                                    <div><span>Home area</span><strong>Hyderabad</strong></div>
+                                    <div><span>Member since</span><strong>March 2026</strong></div>
+                                </div><button class="btn secondary">Edit profile</button>
+                            </article>
+                            <article class="card profile-card">
+                                <div class="profile-icon"><i class="fa-solid fa-car"></i></div>
+                                <h2>Volt E2</h2>
+                                <p class="muted">Electric vehicle · CCS2</p>
+                                <div class="detail-list">
+                                    <div><span>Battery capacity</span><strong>64 kWh</strong></div>
+                                    <div><span>Connector</span><strong>CCS2</strong></div>
+                                    <div><span>Preferred max power</span><strong>180 kW</strong></div>
+                                </div><button class="btn secondary">Manage vehicle</button>
+                            </article>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
+

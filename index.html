@@ -1,0 +1,1413 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#08130f" name="theme-color" />
+    <meta
+        content="VoltGrid public EV charging network — discover nearby chargers, start and track charging sessions, manage payment methods and review billing."
+        name="description" />
+    <title>VoltGrid — Public EV Charging Network</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313b879'/%3E%3Cpath d='M35 8 17 36h13l-3 20 20-29H34z' fill='%23052118'/%3E%3C/svg%3E"
+        rel="icon" />
+    <script>
+        (function () { const h = location.hash.replace(/^#/, ""); if (h.startsWith("dashboard")) { document.documentElement.classList.add("route-dashboard"); const v = h.split("/")[1] || "overview"; if (v) document.documentElement.classList.add("route-" + v) } })();
+    </script>
+
+
+</head>
+
+<body>
+    <header class="nav" id="siteNav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html"><span class="logo"><i
+                        class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+            <nav aria-label="Main navigation" class="nav-links">
+                <a href="index.html" class="active">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
+                    href="services.html">Services</a><a href="network.html">Network</a><a
+                    href="contact.html">Contact</a><a href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="nav-actions"><button aria-label="Toggle RTL" class="nav-control" id="rtlBtn"
+                    type="button">RTL</button><button aria-label="Change theme" class="nav-control" id="themeBtn"
+                    type="button"><i class="fa-solid fa-moon"></i></button><a class="nav-control login-nav"
+                    href="login.html">Login</a><button aria-expanded="false" aria-label="Open menu" class="hamb"
+                    id="hambBtn" type="button"><i class="fa-solid fa-bars"></i></button></div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="active">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a
+                href="services.html">Services</a><a href="network.html">Network</a><a href="contact.html">Contact</a><a
+                href="dashboard.html">Dashboard</a><button class="nav-control" id="mobileRTL"
+                type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
+                    class="fa-solid fa-moon"></i> Theme</button><a class="nav-control login-nav login-menu-btn"
+                href="#login">Login</a>
+        </div>
+    </header>
+    <main>
+        <!-- HOME 1: six sections -->
+        <section class="page active" id="home1">
+            <section class="hero">
+                <div class="glow"></div>
+                <div class="container hero-grid">
+                    <div class="hero-copy"><span class="eyebrow"><i class="fa-solid fa-location-dot"></i> Public EV
+                            Charging Network</span>
+                        <h1 class="two-line"><span>Charge Anywhere.</span><span>Drive Further.</span></h1>
+                        <p class="lead">A connected charging experience for drivers — discover nearby stations, check
+                            live availability, start sessions, follow charging progress and manage payments from one
+                            clean dashboard.</p>
+                        <div class="actions"><a class="btn primary" href="#login">Find a charger <i
+                                    class="fa-solid fa-arrow-right"></i></a><a class="btn secondary"
+                                href="#services">Explore services</a></div>
+                    </div>
+                    <div class="hero-art"><img alt="Electric vehicle charging at a modern charging station"
+                            loading="lazy"
+                            src="https://images.pexels.com/photos/34800677/pexels-photo-34800677.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows an electric vehicle connected to a public fast-charging
+                            station.</div>
+                        <div class="floating float"><strong>18 min to 80%</strong><span>Live charging estimate</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Discover</span>
+                        <h2>Find the right charger faster</h2>
+                        <p>Search by location, connector, charging speed and availability before you arrive.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card media-card reveal"><img alt="EV charging connector close-up" loading="lazy"
+                                src="https://images.pexels.com/photos/15158968/pexels-photo-15158968.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Connector view</span>
+                                <h3>Compatible plugs</h3>
+                                <p class="muted">See compatible connector types and power levels at a glance.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img alt="White electric car connected to charger"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/17748317/pexels-photo-17748317.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Live status</span>
+                                <h3>Available now</h3>
+                                <p class="muted">Prioritize chargers that are ready for your vehicle.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img alt="Outdoor EV charging station" loading="lazy"
+                                src="https://images.pexels.com/photos/9800000/pexels-photo-9800000.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Nearby</span>
+                                <h3>Easy station discovery</h3>
+                                <p class="muted">Use location-based discovery to plan your next charging stop.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split">
+                    <div class="img-box reveal"><img alt="EV charging station in an urban setting" loading="lazy"
+                            src="https://images.pexels.com/photos/37576194/pexels-photo-37576194.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows ev charging station in an urban setting.</div>
+                    </div>
+                    <div class="reveal"><span class="eyebrow">Choose</span>
+                        <h2 style="margin-top:10px">Compare before you plug in</h2>
+                        <p class="muted">Station details bring the useful information together so drivers can choose
+                            with confidence.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check"></i><span>Charging speed and connector
+                                    compatibility</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Current availability and estimated
+                                    wait</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Transparent energy and session
+                                    pricing</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Start</span>
+                        <h2>Start a session with fewer steps</h2>
+                        <p>Scan, authorize and begin charging without a cluttered flow.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-qrcode"></i></div>
+                            <h3 style="margin-top:13px">Scan &amp; connect</h3>
+                            <p class="muted">Use a station QR code or select the charger directly from your dashboard.
+                            </p>
+                        </article>
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                            <h3 style="margin-top:13px">Authorize</h3>
+                            <p class="muted">Confirm your vehicle, connector and preferred payment method.</p>
+                        </article>
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                            <h3 style="margin-top:13px">Start charging</h3>
+                            <p class="muted">The session screen becomes your live view of energy, time and cost.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split reverse">
+                    <div class="img-box reveal"><img alt="Modern EV charging infrastructure outdoors" loading="lazy"
+                            src="https://images.pexels.com/photos/33661090/pexels-photo-33661090.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows modern ev charging infrastructure outdoors.</div>
+                    </div>
+                    <div class="card reveal"><span class="eyebrow">Track</span>
+                        <h2 style="margin-top:10px">Your charging session, live</h2>
+                        <p class="muted">A focused session view shows the information drivers actually need while
+                            charging.</p>
+                        <div class="mini-grid" style="margin-top:15px">
+                            <div class="card value-label"><strong>67%</strong><span class="muted">Battery target</span>
+                            </div>
+                            <div class="card value-label"><strong>42.6 kWh</strong><span class="muted">Energy
+                                    delivered</span></div>
+                            <div class="card value-label"><strong>18 min</strong><span class="muted">Remaining</span>
+                            </div>
+                            <div class="card value-label"><strong>₹312</strong><span class="muted">Current cost</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Pay</span>
+                        <h2>Payments and billing stay organized</h2>
+                        <p>Manage payment methods, review invoices and understand every charging transaction.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card media-card reveal"><img alt="Electric car charging at modern station"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/33508503/pexels-photo-33508503.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <h3>Saved payment methods</h3>
+                                <p class="muted">Keep your preferred card ready for the next session.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img
+                                alt="Electric vehicle charging cable at outdoor station" loading="lazy"
+                                src="https://images.pexels.com/photos/9799999/pexels-photo-9799999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <h3>Session receipts</h3>
+                                <p class="muted">Review energy, duration, rate and total amount after every charge.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img alt="Electric vehicle charging sign" loading="lazy"
+                                src="https://images.pexels.com/photos/9799997/pexels-photo-9799997.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <h3>Billing history</h3>
+                                <p class="muted">Keep your charging costs searchable in one place.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="quote reveal"><span class="eyebrow">Journey</span>
+                        <h2 style="margin-top:10px">A charging experience designed around the driver</h2>
+                        <p class="muted">From finding a compatible station to finishing a session and reviewing the
+                            bill, the driver journey stays clear, compact and responsive.</p>
+                        <div class="actions"><a class="btn primary" href="#login">Open driver dashboard</a><a
+                                class="btn secondary" href="#contact">Talk to the network team</a></div>
+                    </div>
+                    <div class="image-strip" style="margin-top:14px">
+                        <figure class="gallery-item reveal"><img alt="Electric vehicle charging station"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/35736781/pexels-photo-35736781.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric vehicle charging station.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charger infrastructure" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/35736778/pexels-photo-35736778.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charger infrastructure.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Electric mobility charging point"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/35736774/pexels-photo-35736774.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric mobility charging point.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Public electric vehicle charger"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/35736762/pexels-photo-35736762.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Public electric vehicle charger.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging technology" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/35741218/pexels-photo-35741218.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charging technology.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Content from home-2.html -->
+        <div class="page" id="home2">
+            <!-- 1. HERO SECTION -->
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow"><i class="fa-solid fa-route"></i> Smart mobility experience</span>
+                        <h1 class="two-line"><span>Make Every Charge</span><span>Part of the Journey.</span></h1>
+                        <p class="lead">A modern public charging interface built around station discovery, confident
+                            charging, transparent pricing and a simple driver account.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#login">Open driver dashboard</a>
+                            <a class="btn secondary" href="#contact">Get support</a>
+                        </div>
+                    </div>
+                    <div class="hero-art">
+                        <img alt="Electric car at a modern charging point" loading="lazy"
+                            src="https://images.pexels.com/photos/33508504/pexels-photo-33508504.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows an electric vehicle using a modern public charging point.
+                        </div>
+                        <div class="floating float">
+                            <strong>24 / 7 network</strong>
+                            <span>Designed for everyday mobility</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. LIVE NETWORK STATS (SPLIT REVERSE) -->
+            <section class="section"
+                style="background: var(--surface2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+                <div class="container split reverse">
+                    <div class="reveal">
+                        <span class="eyebrow">Live network</span>
+                        <h2 style="margin-top:10px">See what is happening before you arrive</h2>
+                        <p class="muted">Availability, connector type and charging speed are surfaced without
+                            overwhelming the driver. Always know what to expect.</p>
+                        <div class="grid-2" style="margin-top:20px">
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">128</div><span class="muted" style="font-size:0.8rem">Stations
+                                    nearby</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">486</div><span class="muted" style="font-size:0.8rem">Available
+                                    connectors</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">150 kW</div><span class="muted" style="font-size:0.8rem">Fastest
+                                    option</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">4.8★</div><span class="muted" style="font-size:0.8rem">Average
+                                    rating</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="img-box reveal">
+                        <img alt="Electric vehicle charging beside a roadway" loading="lazy"
+                            src="https://images.pexels.com/photos/9799701/pexels-photo-9799701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SERVICES / ENERGY (GRID-3) -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">Energy</span>
+                        <h2>Make charging data easy to understand</h2>
+                        <p>Clear visual summaries help drivers understand energy delivered, cost and time.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card media-card reveal">
+                            <img alt="EV charger and electric vehicle energy connection" loading="lazy"
+                                src="https://images.pexels.com/photos/9799726/pexels-photo-9799726.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Energy</span>
+                                <h3>kWh delivered</h3>
+                                <p class="muted">Know exactly how much energy reached your vehicle.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal">
+                            <img alt="Electric vehicle charging infrastructure" loading="lazy"
+                                src="https://images.pexels.com/photos/9799734/pexels-photo-9799734.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Speed</span>
+                                <h3>Charging rate</h3>
+                                <p class="muted">See whether your current session is delivering expected power.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal">
+                            <img alt="EV charging station technology" loading="lazy"
+                                src="https://images.pexels.com/photos/9799757/pexels-photo-9799757.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Cost</span>
+                                <h3>Spend tracking</h3>
+                                <p class="muted">Keep the running cost visible throughout your session.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. APP CONFIDENCE / DASHBOARD (SPLIT) -->
+            <section class="section" style="background: var(--surface2); padding: 50px 0;">
+                <div class="container split">
+                    <div class="img-box reveal" style="border: none; box-shadow: none; background: transparent;">
+                        <img alt="Electric vehicle connected to charging equipment" loading="lazy"
+                            src="https://images.pexels.com/photos/9800092/pexels-photo-9800092.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840"
+                            style="border-radius: 25px; box-shadow: var(--shadow); border: 1px solid var(--line);" />
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">Account</span>
+                        <h2 style="margin-top:10px">Everything you need after charging</h2>
+                        <p class="muted" style="margin-bottom: 20px;">Manage your entire EV charging lifestyle directly
+                            from your driver dashboard.</p>
+                        <ul class="feature-list" style="display: flex; flex-direction: column; gap: 15px;">
+                            <li>
+                                <i class="fa-solid fa-file-invoice" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Charging history & receipts</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Download automated PDF
+                                        invoices for every session.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-credit-card" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Saved payment methods</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Securely store cards and UPI
+                                        for 1-click charging.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-bell" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Smart notifications</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Get alerted when your car
+                                        reaches its target charge.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. JOURNEY PLANNING (GRID-3 HORIZONTAL) -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">Confidence</span>
+                        <h2>Designed for the moment you plug in</h2>
+                        <p>Important information is prioritized so the active charging state remains calm and readable.
+                        </p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">⚡</div>
+                            <div>
+                                <h3>Charging confirmed</h3>
+                                <p class="muted">Instant visual feedback tells you when energy flow has started.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🔋</div>
+                            <div>
+                                <h3>Battery progress</h3>
+                                <p class="muted">Follow progress toward the target without digging through screens.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🧾</div>
+                            <div>
+                                <h3>Cost clarity</h3>
+                                <p class="muted">Session charges remain visible before the final receipt.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CTA / READY (GRID-2 + GALLERY) -->
+            <section class="section" style="padding-bottom: 60px;">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="card reveal"
+                            style="display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, var(--brand), var(--brand2)); color: #fff; border: none; padding: 40px;">
+                            <span class="eyebrow"
+                                style="background: rgba(0,0,0,0.15); border: none; color: #fff; width: fit-content;">Ready</span>
+                            <h2 style="margin-top:15px; color: #fff;">Your next charge is only a few taps away</h2>
+                            <p style="opacity: 0.9; margin-bottom: 25px;">Use the driver dashboard to find a station,
+                                start a session and review your latest billing activity.</p>
+                            <a class="btn" href="#login"
+                                style="background: #fff; color: #0b1b15; width: fit-content;">Login to continue</a>
+                        </div>
+                        <div class="img-box reveal" style="border: none;">
+                            <img alt="Electric vehicle charging in a modern environment" loading="lazy"
+                                src="https://images.pexels.com/photos/36742999/pexels-photo-36742999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840"
+                                style="height: 100%; border-radius: var(--radius);" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content from about.html -->
+        <section class="page" id="about">
+            <section class="page-hero no-h1-buttons"
+                style="background-image:url('https://images.pexels.com/photos/18678626/pexels-photo-18678626.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840')">
+                <div><span class="eyebrow">Our network</span>
+                    <h1>Built Around Better Electric Mobility</h1>
+                    <p class="lead">A driver-first public charging experience that connects discovery, charging,
+                        payments and billing.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="stats">
+                        <div class="stat reveal"><strong>24/7</strong><span>Driver access</span></div>
+                        <div class="stat reveal"><strong>150 kW+</strong><span>Fast charging options</span></div>
+                        <div class="stat reveal"><strong>4.8★</strong><span>Example station rating</span></div>
+                        <div class="stat reveal"><strong>1 view</strong><span>Sessions + billing</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split">
+                    <div class="img-box reveal"><img alt="Electric mobility charging infrastructure" loading="lazy"
+                            src="https://images.pexels.com/photos/34800677/pexels-photo-34800677.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows electric mobility charging infrastructure.</div>
+                    </div>
+                    <div class="reveal"><span class="eyebrow">Purpose</span>
+                        <h2 style="margin-top:10px">Make public charging feel simple</h2>
+                        <p class="muted">The network concept puts the driver's most important tasks in a logical
+                            sequence: locate a compatible charger, understand the station, begin charging, track
+                            progress and finish with a clear bill.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Principles</span>
+                        <h2>Clarity at every charging step</h2>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h3 style="margin-top:13px">Discover</h3>
+                            <p class="muted">Make nearby charger availability easy to scan and compare.</p>
+                        </article>
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                            <h3 style="margin-top:13px">Charge</h3>
+                            <p class="muted">Keep active session progress and controls visible.</p>
+                        </article>
+                        <article class="card reveal">
+                            <div class="icon-box"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <h3 style="margin-top:13px">Settle</h3>
+                            <p class="muted">Show payment and billing details without hidden surprises.</p>
+                        </article>
+                    </div>
+                    <div class="image-strip" style="margin-top:14px">
+                        <figure class="gallery-item reveal"><img alt="Electric vehicle charging cable"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/15158968/pexels-photo-15158968.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric vehicle charging cable.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging station close-up" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/17748317/pexels-photo-17748317.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charging station close-up.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Electric mobility infrastructure"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/9800000/pexels-photo-9800000.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric mobility infrastructure.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging outdoors" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/37576194/pexels-photo-37576194.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charging outdoors.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Electric vehicle charger" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/33661090/pexels-photo-33661090.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric vehicle charger.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split reverse">
+                    <div class="img-box reveal"><img alt="EV charging technology and clean transportation"
+                            loading="lazy"
+                            src="https://images.pexels.com/photos/33508503/pexels-photo-33508503.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows ev charging technology and clean transportation.</div>
+                    </div>
+                    <div class="card reveal"><span class="eyebrow">Connected</span>
+                        <h2 style="margin-top:10px">One driver account, one charging history</h2>
+                        <p class="muted">A consistent account experience keeps vehicles, saved payment methods, sessions
+                            and invoices connected, whether the driver is charging at a city hub or on a longer route.
+                        </p>
+                        <div class="actions"><span class="status">Vehicle profile</span><span class="status">Payment
+                                wallet</span><span class="status">Session history</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="timeline">
+                        <div class="card timeline-row reveal">
+                            <div class="timeline-year"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h3>Discover the station</h3>
+                                <p class="muted">Find a compatible charger using location and live station information.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card timeline-row reveal">
+                            <div class="timeline-year"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h3>Start the session</h3>
+                                <p class="muted">Authorize the connector and begin charging from the driver dashboard.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card timeline-row reveal">
+                            <div class="timeline-year"><i class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <h3>Track and finish</h3>
+                                <p class="muted">Monitor energy and cost, stop charging, then review the completed bill.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Content from services.html -->
+        <section class="page services-page" id="services">
+            <section class="page-hero no-h1-buttons"
+                style="background-image:url('https://images.pexels.com/photos/21832812/pexels-photo-21832812.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840')">
+                <div><span class="eyebrow">Charging services</span>
+                    <h1>Charging Built Around Your Journey</h1>
+                    <p class="lead">A focused set of driver services for station discovery, live charging, payments and
+                        billing.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="grid-3">
+                        <article class="card media-card reveal"><img alt="Public EV charging station" loading="lazy"
+                                src="https://images.pexels.com/photos/23939539/pexels-photo-23939539.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Locator</span>
+                                <h3>Station locator</h3>
+                                <p class="muted">Locate nearby stations and inspect availability, connector type, speed
+                                    and pricing.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img alt="Electric vehicle at charger" loading="lazy"
+                                src="https://images.pexels.com/photos/24376862/pexels-photo-24376862.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Sessions</span>
+                                <h3>Session control</h3>
+                                <p class="muted">Start, track and finish charging with live energy, time and cost
+                                    indicators.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img alt="EV charging equipment close-up" loading="lazy"
+                                src="https://images.pexels.com/photos/29074374/pexels-photo-29074374.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Payments</span>
+                                <h3>Payment methods</h3>
+                                <p class="muted">Save a preferred card and keep charging payments ready for the next
+                                    trip.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split">
+                    <div class="reveal"><span class="eyebrow">History</span>
+                        <h2 style="margin-top:10px">Charging history that tells the full story</h2>
+                        <p class="muted">Review previous stations, dates, energy delivered, duration and final amounts
+                            from a single account.</p>
+                        <div class="card" style="margin-top:15px">
+                            <div class="kpi"><strong>Last session</strong><span>Today · 08:42</span></div>
+                            <p class="muted">Central Mobility Hub · 38.4 kWh · ₹286</p>
+                        </div>
+                    </div>
+                    <div class="img-box reveal"><img alt="Electric car connected to charging point" loading="lazy"
+                            src="https://images.pexels.com/photos/29163104/pexels-photo-29163104.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows electric car connected to charging point.</div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Driver care</span>
+                        <h2>Helpful details without information overload</h2>
+                        <p>Each service keeps its primary action obvious and supporting information close by.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">📍</div>
+                            <div>
+                                <h3>Location first</h3>
+                                <p class="muted">See useful nearby charging options when you need them.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🔌</div>
+                            <div>
+                                <h3>Compatibility</h3>
+                                <p class="muted">Check connector and charging speed before starting.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">💳</div>
+                            <div>
+                                <h3>Secure payment flow</h3>
+                                <p class="muted">Keep saved methods and completed bills organized.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="img-box reveal"><img alt="Modern EV charging infrastructure" loading="lazy"
+                                src="https://images.pexels.com/photos/31670395/pexels-photo-31670395.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="image-note">Image shows modern ev charging infrastructure.</div>
+                        </div>
+                        <div class="card reveal"><span class="eyebrow">Service flow</span>
+                            <h2 style="margin-top:10px">From charger search to final invoice</h2>
+                            <ul class="feature-list">
+                                <li><i class="fa-solid fa-check"></i><span>Discover a nearby compatible charger</span>
+                                </li>
+                                <li><i class="fa-solid fa-check"></i><span>Review availability and pricing</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Start and monitor the charging session</span>
+                                </li>
+                                <li><i class="fa-solid fa-check"></i><span>Stop, pay and review your billing
+                                        history</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-strip services-gallery" style="margin-top:14px">
+                        <figure class="gallery-item reveal"><img alt="Electric vehicle at charging station"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/11968811/pexels-photo-11968811.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric vehicle at charging station.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging equipment" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/13453637/pexels-photo-13453637.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charging equipment.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Electric car charging outdoors"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/33508506/pexels-photo-33508506.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Electric car charging outdoors.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Public EV charging point" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/33508514/pexels-photo-33508514.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Public EV charging point.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Modern electric mobility charger"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/33508519/pexels-photo-33508519.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Modern electric mobility charger.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging infrastructure" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&amp;fit=crop&amp;w=3840&amp;q=90" />
+                            <figcaption>EV charging infrastructure.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Content from network.html -->
+        <section class="page" id="network">
+            <section class="page-hero no-h1-buttons"
+                style="background-image:url('https://images.pexels.com/photos/37576184/pexels-photo-37576184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840')">
+                <div><span class="eyebrow">Public charging network</span>
+                    <h1>Find Chargers That Fit Your Journey</h1>
+                    <p class="lead">Explore public charging locations, connector types, charging speeds, pricing and
+                        driver-focused station details before you plug in.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Station discovery</span>
+                        <h2>See useful station information at a glance</h2>
+                        <p>Every station card is designed to answer the questions a driver has before arriving.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card media-card reveal"><img
+                                alt="Outdoor electric vehicle charging station hardware" loading="lazy"
+                                src="https://images.pexels.com/photos/33083244/pexels-photo-33083244.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Hardware</span>
+                                <h3>Connector details</h3>
+                                <p class="muted">Identify charging hardware and connector compatibility before starting
+                                    a session.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img
+                                alt="Modern electric vehicle charging station outdoors" loading="lazy"
+                                src="https://images.pexels.com/photos/31813752/pexels-photo-31813752.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Availability</span>
+                                <h3>Open charging bays</h3>
+                                <p class="muted">Check available bays and charging capacity so you can choose a
+                                    practical stop.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal"><img
+                                alt="Electric vehicle charging station outside a destination" loading="lazy"
+                                src="https://images.pexels.com/photos/31538378/pexels-photo-31538378.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy"><span class="tag">Destination</span>
+                                <h3>Charging where you go</h3>
+                                <p class="muted">Find public chargers near shopping, travel and everyday destinations.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container split">
+                    <div class="img-box reveal"><img alt="Electric car actively charging at a station" loading="lazy"
+                            src="https://images.pexels.com/photos/36339137/pexels-photo-36339137.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows an electric car connected to a public charger, representing
+                            an active charging session.</div>
+                    </div>
+                    <div class="reveal"><span class="eyebrow">Power choices</span>
+                        <h2 style="margin-top:10px">Compare charging speed before you connect</h2>
+                        <p class="muted">Drivers can distinguish standard, fast and high-power charging options and
+                            select the station that matches their route and time available.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check"></i><span>Connector and vehicle compatibility</span>
+                            </li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Power level and estimated charging
+                                    time</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Station availability and pricing
+                                    context</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Connected experience</span>
+                        <h2>From map discovery to charging status</h2>
+                        <p>The network experience keeps station discovery and live session information connected.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">📍</div>
+                            <div>
+                                <h3>Nearby first</h3>
+                                <p class="muted">Location-led discovery surfaces practical charging options around the
+                                    driver's route.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">⚡</div>
+                            <div>
+                                <h3>Power visible</h3>
+                                <p class="muted">Charging speed and connector information stay visible before the
+                                    session begins.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🔋</div>
+                            <div>
+                                <h3>Progress clear</h3>
+                                <p class="muted">The dashboard keeps energy, battery progress, remaining time and cost
+                                    easy to read.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="grid-2">
+                        <article class="card reveal"><span class="eyebrow">Network coverage</span>
+                            <h2 style="margin-top:10px">A public charging layer for everyday mobility</h2>
+                            <p class="muted">The concept connects stations across urban areas, travel corridors and
+                                destination locations while keeping the driver journey consistent.</p>
+                            <div class="stats" style="margin-top:15px">
+                                <div class="stat"><strong>24/7</strong><span>Access</span></div>
+                                <div class="stat"><strong>150 kW+</strong><span>Fast options</span></div>
+                            </div>
+                        </article>
+                        <div class="img-box reveal"><img alt="Modern public electric vehicle charging station outdoors"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/31943852/pexels-photo-31943852.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="image-note">Image shows a modern outdoor public charging installation built for
+                                electric mobility.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-head"><span class="eyebrow">Network visuals</span>
+                        <h2>Real charging infrastructure, clearly explained</h2>
+                        <p>Each visual is paired with a short description so visitors understand what the image
+                            represents.</p>
+                    </div>
+                    <div class="image-strip">
+                        <figure class="gallery-item reveal"><img alt="EV charging station digital display"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/34800671/pexels-photo-34800671.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Charging display showing session and energy information.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging station sign in greenery"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/9800007/pexels-photo-9800007.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>EV charging signage marking a public charging location.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Hand connecting an EV charging cable"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/34800931/pexels-photo-34800931.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Driver connecting a charging cable to an electric vehicle.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="EV charging station at night" class="gallery-img"
+                                loading="lazy"
+                                src="https://images.pexels.com/photos/5864153/pexels-photo-5864153.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Public EV charging infrastructure operating after dark.</figcaption>
+                        </figure>
+                        <figure class="gallery-item reveal"><img alt="Electric vehicle charging connector close-up"
+                                class="gallery-img" loading="lazy"
+                                src="https://images.pexels.com/photos/37576219/pexels-photo-37576219.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <figcaption>Close-up of the charging connector and vehicle charge port.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Content from contact.html -->
+        <section class="page" id="contact">
+            <section class="page-hero no-h1-buttons"
+                style="background-image:url('https://images.pexels.com/photos/35736783/pexels-photo-35736783.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840')">
+                <div><span class="eyebrow">Contact &amp; support</span>
+                    <h1>We're Here When You Need a Charge</h1>
+                    <p class="lead">Questions about stations, charging sessions, payments or driver access? Contact the
+                        network team.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container contact-grid">
+                    <div class="contact-list">
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📧</div>
+                            <div><strong>Email support</strong>
+                                <div class="muted">support@voltgrid.example</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📞</div>
+                            <div><strong>Phone</strong>
+                                <div class="muted">+91 40 4567 8900</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">📍</div>
+                            <div><strong>Network office</strong>
+                                <div class="muted">Hyderabad, Telangana, India</div>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal">
+                            <div class="icon-box">⚡</div>
+                            <div><strong>Driver support</strong>
+                                <div class="muted">Available for station, session and billing questions.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card form-card reveal">
+                        <div class="section-head" style="margin-bottom:15px"><span class="eyebrow">Send a message</span>
+                            <h2>Contact the charging team</h2>
+                        </div>
+                        <form id="contactForm">
+                            <div class="form-grid">
+                                <div class="field"><label>Name</label><input placeholder="Your name" required="" />
+                                </div>
+                                <div class="field"><label>Email</label><input placeholder="you@example.com" required=""
+                                        type="email" /></div>
+                                <div class="field"><label>Topic</label><select>
+                                        <option>Station availability</option>
+                                        <option>Charging session</option>
+                                        <option>Payment / billing</option>
+                                        <option>Driver login</option>
+                                        <option>Other</option>
+                                    </select></div>
+                                <div class="field"><label>Phone</label><input placeholder="Optional" /></div>
+                                <div class="field full"><label>Message</label><textarea
+                                        placeholder="Tell us how we can help..." required=""></textarea></div>
+                            </div><button class="btn primary" style="width:100%;margin-top:13px" type="submit">Send
+                                message <i class="fa-solid fa-paper-plane"></i></button>
+                            <p class="status hide" id="formMsg" style="margin-top:12px">Message captured in this demo.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container"><iframe class="map reveal" loading="lazy"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=78.3600%2C17.3400%2C78.5600%2C17.5200&amp;layer=mapnik&amp;marker=17.4400%2C78.4600"
+                        title="Hyderabad map"></iframe></div>
+            </section>
+        </section>
+
+        <!-- DRIVER DASHBOARD: specifically matching client requirement -->
+        <section class="page" id="dashboard">
+            <div class="dashboard-shell">
+                <div class="dash-mobilebar">
+                    <button aria-expanded="false" aria-label="Open dashboard menu" class="dash-hamb" id="dashHamb"
+                        type="button"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dash-mobile-title"><span class="eyebrow">Driver
+                            dashboard</span><strong>VoltGrid</strong></div>
+                    <a aria-label="Open profile" class="dash-avatar" href="#dashboard/profile">A</a>
+                </div>
+                <div class="dashboard-layout">
+                    <aside class="dash-sidebar" id="dashSidebar">
+                        <div class="dash-side-brand">
+                            <span class="logo"><i class="fa-solid fa-bolt"></i></span>
+                            <div><strong>VoltGrid</strong><small>Driver Portal</small></div>
+                        </div>
+                        <nav aria-label="Driver dashboard" class="dash-side-nav">
+                            <a data-dash-view="overview" href="#dashboard"><i
+                                    class="fa-solid fa-grid-2"></i><span>Overview</span></a>
+                            <a data-dash-view="chargers" href="#dashboard/chargers"><i
+                                    class="fa-solid fa-location-dot"></i><span>Find Chargers</span></a>
+                            <a data-dash-view="session" href="#dashboard/session"><i
+                                    class="fa-solid fa-bolt"></i><span>Live Session</span></a>
+                            <a data-dash-view="history" href="#dashboard/history"><i
+                                    class="fa-solid fa-clock-rotate-left"></i><span>Charging History</span></a>
+                            <a data-dash-view="payments" href="#dashboard/payments"><i
+                                    class="fa-brands fa-cc-visa"></i><span>Payment Methods</span></a>
+                            <a data-dash-view="billing" href="#dashboard/billing"><i
+                                    class="fa-solid fa-file-invoice-dollar"></i><span>Billing</span></a>
+                            <a data-dash-view="profile" href="#dashboard/profile"><i
+                                    class="fa-solid fa-car"></i><span>Vehicle &amp; Profile</span></a>
+                        </nav>
+                        <div class="dash-side-tools">
+                            <button id="dashThemeBtn" type="button"><i
+                                    class="fa-solid fa-moon"></i><span>Theme</span></button>
+                            <button id="dashRTLBtn" type="button"><i
+                                    class="fa-solid fa-right-left"></i><span>RTL</span></button>
+                            <button class="logout" id="dashLogout" type="button"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></button>
+                        </div>
+                    </aside>
+                    <div class="dash-overlay" id="dashOverlay"></div>
+                    <main class="dashboard-content">
+                        <div class="dash-page active" data-dash-page="overview">
+                            <div class="dash-top improved">
+                                <div>
+                                    <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Driver dashboard</span>
+                                    <h1>Welcome back, Arjun</h1>
+                                    <p class="muted">Find a nearby charger, manage an active session, review your
+                                        charging history, and keep payments and billing in one place.</p>
+                                </div>
+                                <div class="dash-actions"><a class="btn secondary" href="#contact"><i
+                                            class="fa-regular fa-circle-question"></i> Support</a></div>
+                            </div>
+                            <div class="dash-grid">
+                                <article class="card dash-stat">
+                                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div><span
+                                        class="muted">Nearby stations</span>
+                                    <div class="metric">18</div><span class="status">Within 5 km</span>
+                                </article>
+                                <article class="card dash-stat">
+                                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div><span
+                                        class="muted">Active session</span>
+                                    <div class="metric">67%</div><span class="status">Charging now</span>
+                                </article>
+                                <article class="card dash-stat">
+                                    <div class="icon-box"><i class="fa-solid fa-battery-three-quarters"></i></div><span
+                                        class="muted">Energy this month</span>
+                                    <div class="metric">214 kWh</div><span class="status">+12%</span>
+                                </article>
+                                <article class="card dash-stat">
+                                    <div class="icon-box"><i class="fa-solid fa-wallet"></i></div><span
+                                        class="muted">Current balance</span>
+                                    <div class="metric">₹1,840</div><span class="status">Available</span>
+                                </article>
+                            </div>
+                            <div class="dashboard-feature-grid">
+                                <article class="card quick-map-card">
+                                    <div class="kpi">
+                                        <div><span class="eyebrow">Station discovery</span>
+                                            <h2>Find your next charger</h2>
+                                        </div><a class="btn primary" href="#dashboard/chargers">Explore stations</a>
+                                    </div>
+                                    <div class="map-preview">
+                                        <div class="map-grid"></div><span class="map-pin p1"><i
+                                                class="fa-solid fa-bolt"></i></span><span class="map-pin p2"><i
+                                                class="fa-solid fa-bolt"></i></span><span class="map-pin p3"><i
+                                                class="fa-solid fa-bolt"></i></span>
+                                        <div class="map-label"><strong>18 stations nearby</strong><small>Live
+                                                availability &amp; connector types</small></div>
+                                    </div>
+                                </article>
+                                <article class="card session-preview">
+                                    <span class="eyebrow">Live charging session</span>
+                                    <h2>Central Mobility Hub</h2>
+                                    <p class="muted">CCS2 · Bay 04 · Started 10:18 AM</p>
+                                    <div class="progress"><span></span></div>
+                                    <div class="kpi"><strong>67%</strong><span>Target 80%</span></div>
+                                    <div class="session-grid">
+                                        <div class="value-label"><strong>42.6 kWh</strong><span>Energy</span></div>
+                                        <div class="value-label"><strong>18 min</strong><span>Remaining</span></div>
+                                        <div class="value-label"><strong>₹312</strong><span>Current cost</span></div>
+                                    </div><a class="btn secondary full-btn" href="#dashboard/session">Open live
+                                        session</a>
+                                </article>
+                            </div>
+                            <div class="grid-3 dash-lower-grid">
+                                <a class="card dash-action-card" href="#dashboard/history"><i
+                                        class="fa-solid fa-clock-rotate-left"></i><strong>Review
+                                        history</strong><span>See every completed charging session.</span></a>
+                                <a class="card dash-action-card" href="#dashboard/payments"><i
+                                        class="fa-solid fa-credit-card"></i><strong>Manage payments</strong><span>Update
+                                        your saved payment methods.</span></a>
+                                <a class="card dash-action-card" href="#dashboard/billing"><i
+                                        class="fa-solid fa-file-invoice"></i><strong>Review billing</strong><span>Open
+                                        invoices and monthly charging spend.</span></a>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="chargers">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Station discovery</span>
+                                    <h1>Find Chargers</h1>
+                                    <p class="muted">Locate public charging stations, compare connectors, charging
+                                        speeds, availability and pricing before you arrive.</p>
+                                </div><button class="btn primary" onclick="alert('Demo: map view opened')"
+                                    type="button"><i class="fa-solid fa-map"></i> Map view</button>
+                            </div>
+                            <div class="filter-row"><button class="filter active">Nearby</button><button
+                                    class="filter">DC Fast</button><button class="filter">CCS2</button><button
+                                    class="filter">Available now</button></div>
+                            <div class="station-grid">
+                                <article class="card station-card"><img
+                                        alt="Modern EV charging station with digital charger display" loading="lazy"
+                                        src="https://images.pexels.com/photos/34800670/pexels-photo-34800670.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                                    <div class="station-card-body"><span class="status">8 bays available</span>
+                                        <h3>Central Mobility Hub</h3>
+                                        <p class="muted">0.8 km · DC fast · CCS2 · up to 180 kW</p>
+                                        <div class="station-meta"><strong>₹14/kWh</strong><span>Open 24/7</span></div>
+                                        <button class="btn primary full-btn"
+                                            onclick="startDemo('Central Mobility Hub')">Start charging</button>
+                                    </div>
+                                </article>
+                                <article class="card station-card"><img
+                                        alt="Public EV charging point for electric mobility" loading="lazy"
+                                        src="https://images.pexels.com/photos/34800675/pexels-photo-34800675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                                    <div class="station-card-body"><span class="status">5 bays available</span>
+                                        <h3>Metro Green Charge</h3>
+                                        <p class="muted">1.6 km · CCS2 · AC + DC · up to 120 kW</p>
+                                        <div class="station-meta"><strong>₹12/kWh</strong><span>Open 24/7</span></div>
+                                        <button class="btn primary full-btn"
+                                            onclick="startDemo('Metro Green Charge')">Start charging</button>
+                                    </div>
+                                </article>
+                                <article class="card station-card"><img
+                                        alt="Outdoor electric vehicle charging point near a destination" loading="lazy"
+                                        src="https://images.pexels.com/photos/9800009/pexels-photo-9800009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                                    <div class="station-card-body"><span class="status">3 bays available</span>
+                                        <h3>Airport Express Charge</h3>
+                                        <p class="muted">4.1 km · CCS2 · 150 kW · Route charging</p>
+                                        <div class="station-meta"><strong>₹16/kWh</strong><span>Open 24/7</span></div>
+                                        <button class="btn primary full-btn"
+                                            onclick="startDemo('Airport Express Charge')">Start charging</button>
+                                    </div>
+                                </article>
+                                <article class="card station-card"><img
+                                        alt="Electric car actively charging at a public charging station" loading="lazy"
+                                        src="https://images.pexels.com/photos/36339137/pexels-photo-36339137.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                                    <div class="station-card-body"><span class="status">2 bays available</span>
+                                        <h3>Greenway Plaza</h3>
+                                        <p class="muted">5.2 km · CCS2 · 180 kW · Destination</p>
+                                        <div class="station-meta"><strong>₹13/kWh</strong><span>Open until 11 PM</span>
+                                        </div><button class="btn primary full-btn"
+                                            onclick="startDemo('Greenway Plaza')">Start charging</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="session">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Charging control</span>
+                                    <h1>Live Charging Session</h1>
+                                    <p class="muted">Track battery progress, delivered energy, time remaining and the
+                                        current session cost.</p>
+                                </div><span class="status big-status">Charging</span>
+                            </div>
+                            <div class="live-session-layout">
+                                <article class="session live-session-card"><span class="eyebrow">Central Mobility Hub ·
+                                        Bay 04</span>
+                                    <h2>Charging at 67%</h2>
+                                    <p class="muted">CCS2 · Started 10:18 AM · Target 80%</p>
+                                    <div class="big-progress"><span></span></div>
+                                    <div class="session-grid">
+                                        <div class="value-label"><strong>42.6 kWh</strong><span>Energy delivered</span>
+                                        </div>
+                                        <div class="value-label"><strong>18 min</strong><span>Estimated remaining</span>
+                                        </div>
+                                        <div class="value-label"><strong>₹312</strong><span>Current cost</span></div>
+                                    </div><button class="btn stop-btn"
+                                        onclick="alert('Demo: stop charging confirmation')"><i
+                                            class="fa-solid fa-stop"></i> Stop session</button>
+                                </article>
+                                <article class="card"><span class="eyebrow">Session details</span>
+                                    <div class="detail-list">
+                                        <div><span>Charger</span><strong>VG-CCS-004</strong></div>
+                                        <div><span>Power</span><strong>126 kW</strong></div>
+                                        <div><span>Battery</span><strong>67% → 80%</strong></div>
+                                        <div><span>Estimated total</span><strong>₹374</strong></div>
+                                        <div><span>Vehicle</span><strong>Volt E2</strong></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="history">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Past sessions</span>
+                                    <h1>Charging History</h1>
+                                    <p class="muted">Review completed charging sessions, energy delivered, duration and
+                                        amount paid.</p>
+                                </div><button class="btn secondary" type="button"><i class="fa-solid fa-download"></i>
+                                    Export</button>
+                            </div>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Station</th>
+                                            <th>Energy</th>
+                                            <th>Duration</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>24 Sep 2026</td>
+                                            <td>Central Mobility Hub</td>
+                                            <td>42.6 kWh</td>
+                                            <td>31 min</td>
+                                            <td>₹312</td>
+                                            <td><span class="status">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>21 Sep 2026</td>
+                                            <td>Metro Green Charge</td>
+                                            <td>28.2 kWh</td>
+                                            <td>24 min</td>
+                                            <td>₹226</td>
+                                            <td><span class="status">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18 Sep 2026</td>
+                                            <td>Airport Express Charge</td>
+                                            <td>51.4 kWh</td>
+                                            <td>39 min</td>
+                                            <td>₹742</td>
+                                            <td><span class="status">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14 Sep 2026</td>
+                                            <td>Greenway Plaza</td>
+                                            <td>35.1 kWh</td>
+                                            <td>29 min</td>
+                                            <td>₹456</td>
+                                            <td><span class="status">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>09 Sep 2026</td>
+                                            <td>Central Mobility Hub</td>
+                                            <td>31.8 kWh</td>
+                                            <td>26 min</td>
+                                            <td>₹250</td>
+                                            <td><span class="status">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="grid-3 history-summary">
+                                <article class="card"><span class="muted">September sessions</span>
+                                    <div class="metric">9</div>
+                                </article>
+                                <article class="card"><span class="muted">Energy delivered</span>
+                                    <div class="metric">214 kWh</div>
+                                </article>
+                                <article class="card"><span class="muted">September spend</span>
+                                    <div class="metric">₹2,184</div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="payments">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Secure checkout</span>
+                                    <h1>Payment Methods</h1>
+                                    <p class="muted">Manage the payment methods used for charging sessions and automatic
+                                        billing.</p>
+                                </div><button class="btn primary" onclick="alert('Demo: add payment method')"
+                                    type="button"><i class="fa-solid fa-plus"></i> Add method</button>
+                            </div>
+                            <div class="payment-page-grid">
+                                <article class="card payment-card featured">
+                                    <div class="payment-card-top"><span class="cardbrand visa">VISA</span><span
+                                            class="status">Default</span></div><strong>•••• 4242</strong><span
+                                        class="muted">Arjun Kumar · Expires 09/29</span>
+                                    <div class="payment-actions"><button class="btn secondary"
+                                            type="button">Edit</button><button class="btn secondary"
+                                            type="button">Remove</button></div>
+                                </article>
+                                <article class="card payment-card">
+                                    <div class="payment-card-top"><span class="cardbrand upi">UPI</span><span
+                                            class="tag">Instant</span></div><strong>arjun@upi</strong><span
+                                        class="muted">Preferred UPI payment</span>
+                                    <div class="payment-actions"><button class="btn secondary"
+                                            type="button">Edit</button><button class="btn secondary"
+                                            type="button">Remove</button></div>
+                                </article>
+                                <article class="card add-payment"><i class="fa-solid fa-plus"></i><strong>Add another
+                                        payment method</strong><span class="muted">Visa, Mastercard, UPI and supported
+                                        digital payments.</span></article>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="billing">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Statements &amp; invoices</span>
+                                    <h1>Billing</h1>
+                                    <p class="muted">Review monthly charging spend, invoices and payment status in one
+                                        place.</p>
+                                </div><button class="btn secondary" type="button"><i class="fa-solid fa-download"></i>
+                                    Download statement</button>
+                            </div>
+                            <div class="billing-overview">
+                                <article class="card"><span class="muted">September total</span>
+                                    <div class="metric">₹2,184</div><span class="status">9 charging sessions</span>
+                                </article>
+                                <article class="card"><span class="muted">Average session</span>
+                                    <div class="metric">₹243</div><span class="muted">Per completed session</span>
+                                </article>
+                                <article class="card"><span class="muted">Energy cost</span>
+                                    <div class="metric">₹10.21</div><span class="muted">Average per kWh</span>
+                                </article>
+                            </div>
+                            <div class="card invoice-card">
+                                <div class="kpi">
+                                    <div><span class="eyebrow">Recent invoices</span>
+                                        <h2>Monthly billing history</h2>
+                                    </div><span class="status">Paid</span>
+                                </div>
+                                <div class="invoice-list">
+                                    <div class="invoice">
+                                        <div><strong>September 2026</strong><span>9 sessions · 214 kWh</span></div>
+                                        <strong>₹2,184</strong><button class="btn secondary">View</button>
+                                    </div>
+                                    <div class="invoice">
+                                        <div><strong>August 2026</strong><span>11 sessions · 260 kWh</span></div>
+                                        <strong>₹2,760</strong><button class="btn secondary">View</button>
+                                    </div>
+                                    <div class="invoice">
+                                        <div><strong>July 2026</strong><span>7 sessions · 184 kWh</span></div>
+                                        <strong>₹1,940</strong><button class="btn secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-page" data-dash-page="profile">
+                            <div class="dash-page-head">
+                                <div><span class="eyebrow">Driver settings</span>
+                                    <h1>Vehicle &amp; Profile</h1>
+                                    <p class="muted">Keep your driver details and vehicle charging preferences ready for
+                                        the next session.</p>
+                                </div>
+                            </div>
+                            <div class="grid-2">
+                                <article class="card profile-card">
+                                    <div class="profile-icon"><i class="fa-solid fa-user"></i></div>
+                                    <h2>Arjun Kumar</h2>
+                                    <p class="muted">arjun@example.com</p>
+                                    <div class="detail-list">
+                                        <div><span>Preferred charging target</span><strong>80%</strong></div>
+                                        <div><span>Home area</span><strong>Hyderabad</strong></div>
+                                        <div><span>Member since</span><strong>March 2026</strong></div>
+                                    </div><button class="btn secondary">Edit profile</button>
+                                </article>
+                                <article class="card profile-card">
+                                    <div class="profile-icon"><i class="fa-solid fa-car"></i></div>
+                                    <h2>Volt E2</h2>
+                                    <p class="muted">Electric vehicle · CCS2</p>
+                                    <div class="detail-list">
+                                        <div><span>Battery capacity</span><strong>64 kWh</strong></div>
+                                        <div><span>Connector</span><strong>CCS2</strong></div>
+                                        <div><span>Preferred max power</span><strong>180 kW</strong></div>
+                                    </div><button class="btn secondary">Manage vehicle</button>
+                                </article>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="siteFooter">
+        <div class="container footer-grid">
+            <div><a class="brand" href="#home1"><span class="logo"><i
+                            class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+                <p>VoltGrid is a public EV charging network concept focused on fast station discovery, simple charging
+                    sessions, transparent payments and organized billing for drivers.</p>
+                <div class="social-row"><a aria-label="Facebook" class="social-icon fb" href="https://www.facebook.com/"
+                        rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a
+                        aria-label="Instagram" class="social-icon ig" href="https://www.instagram.com/" rel="noopener"
+                        target="_blank"><i class="fa-brands fa-instagram"></i></a><a aria-label="LinkedIn"
+                        class="social-icon li" href="https://www.linkedin.com/" rel="noopener" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a><a aria-label="X" class="social-icon x"
+                        href="https://x.com/" rel="noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="#home1" class="active">Home 1</a><br /><a href="#home2">Home 2</a><br /><a href="#about">About</a><br /><a
+                        href="#services">Services</a></p>
+            </div>
+            <div>
+                <h3>Driver</h3>
+                <p><a href="#login">Login</a><br /><a href="#dashboard">Dashboard</a><br /><a
+                        href="#contact">Support</a></p>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <p><a href="#">Privacy Policy</a><br /><a href="#">Terms of Service</a><br /><a href="#">Cookie
+                        Policy</a></p>
+            </div>
+        </div>
+        <div class="container center"
+            style="border-top:1px solid var(--line);margin-top:22px;padding-top:16px;color:var(--muted);font-size:.78rem">
+            © 2026 VoltGrid. Demo website — connect your production authentication, station APIs and payment gateway
+            before launch.</div>
+    </footer>
+    <button aria-label="Move to top" class="top-btn" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="main.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport" />
+    <meta content="#08130f" name="theme-color" />
+    <meta
+        content="VoltGrid public EV charging network — discover nearby chargers, start and track charging sessions, manage payment methods and review billing."
+        name="description" />
+    <title>VoltGrid — Public EV Charging Network</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313b879'/%3E%3Cpath d='M35 8 17 36h13l-3 20 20-29H34z' fill='%23052118'/%3E%3C/svg%3E"
+        rel="icon" />
+    <script>
+        (function () { const h = location.hash.replace(/^#/, ""); if (h.startsWith("dashboard")) { document.documentElement.classList.add("route-dashboard"); const v = h.split("/")[1] || "overview"; if (v) document.documentElement.classList.add("route-" + v) } })();
+    </script>
+
+    <style>
+        /* Differentiate the About page */
+        #about {
+            background: var(--surface2);
+        }
+
+        #about .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        #about .card {
+            box-shadow: none;
+            border: 1px solid var(--brand);
+            border-radius: 30px;
+        }
+
+        /* Differentiate the Services page */
+        #services {
+            background: var(--bg);
+        }
+
+        #services .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        #services .card {
+            background: var(--surface2);
+            border: none;
+        }
+
+        #services .section-head h2 {
+            color: var(--brand2);
+        }
+
+        /* Differentiate the Network page */
+        #network {
+            background: var(--surface);
+            border-top: 5px solid var(--accent);
+        }
+
+        #network .section-head {
+            text-align: left;
+        }
+
+        #network .grid-3 {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        #network .card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-direction: row;
+        }
+
+        #network .card img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Differentiate the Contact page */
+        #contact {
+            background: var(--surface2);
+        }
+
+        #contact .contact-grid {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav" id="siteNav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html"><span class="logo"><i
+                        class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+            <nav aria-label="Main navigation" class="nav-links">
+                <a href="index.html">Home 1</a><a href="home-2.html" class="active">Home 2</a><a href="about.html">About</a><a
+                    href="services.html">Services</a><a href="network.html">Network</a><a
+                    href="contact.html">Contact</a><a href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="nav-actions"><button aria-label="Toggle RTL" class="nav-control" id="rtlBtn"
+                    type="button">RTL</button><button aria-label="Change theme" class="nav-control" id="themeBtn"
+                    type="button"><i class="fa-solid fa-moon"></i></button><a class="nav-control login-nav"
+                    href="login.html">Login</a><button aria-expanded="false" aria-label="Open menu" class="hamb"
+                    id="hambBtn" type="button"><i class="fa-solid fa-bars"></i></button></div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home 1</a><a href="home-2.html" class="active">Home 2</a><a href="about.html">About</a><a
+                href="services.html">Services</a><a href="network.html">Network</a><a href="contact.html">Contact</a><a
+                href="dashboard.html">Dashboard</a><button class="nav-control" id="mobileRTL"
+                type="button">RTL</button><button class="nav-control" id="mobileTheme" type="button"><i
+                    class="fa-solid fa-moon"></i> Theme</button><a class="nav-control login-nav login-menu-btn"
+                href="login.html">Login</a>
+        </div>
+    </header>
+    <main>
+        <div class="page active" id="home2">
+            <!-- 1. HERO SECTION -->
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow"><i class="fa-solid fa-route"></i> Smart mobility experience</span>
+                        <h1 class="two-line"><span>Make Every Charge</span><span>Part of the Journey.</span></h1>
+                        <p class="lead">A modern public charging interface built around station discovery, confident
+                            charging, transparent pricing and a simple driver account.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="#login">Open driver dashboard</a>
+                            <a class="btn secondary" href="#contact">Get support</a>
+                        </div>
+                    </div>
+                    <div class="hero-art">
+                        <img alt="Electric car at a modern charging point" loading="lazy"
+                            src="https://images.pexels.com/photos/33508504/pexels-photo-33508504.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                        <div class="image-note">Image shows an electric vehicle using a modern public charging point.
+                        </div>
+                        <div class="floating float">
+                            <strong>24 / 7 network</strong>
+                            <span>Designed for everyday mobility</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. LIVE NETWORK STATS (SPLIT REVERSE) -->
+            <section class="section"
+                style="background: var(--surface2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+                <div class="container split reverse">
+                    <div class="reveal">
+                        <span class="eyebrow">Live network</span>
+                        <h2 style="margin-top:10px">See what is happening before you arrive</h2>
+                        <p class="muted">Availability, connector type and charging speed are surfaced without
+                            overwhelming the driver. Always know what to expect.</p>
+                        <div class="grid-2" style="margin-top:20px">
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">128</div><span class="muted" style="font-size:0.8rem">Stations
+                                    nearby</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">486</div><span class="muted" style="font-size:0.8rem">Available
+                                    connectors</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">150 kW</div><span class="muted" style="font-size:0.8rem">Fastest
+                                    option</span>
+                            </article>
+                            <article class="card" style="padding: 15px;">
+                                <div class="metric">4.8★</div><span class="muted" style="font-size:0.8rem">Average
+                                    rating</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="img-box reveal">
+                        <img alt="Electric vehicle charging beside a roadway" loading="lazy"
+                            src="https://images.pexels.com/photos/9799701/pexels-photo-9799701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SERVICES / ENERGY (GRID-3) -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">Energy</span>
+                        <h2>Make charging data easy to understand</h2>
+                        <p>Clear visual summaries help drivers understand energy delivered, cost and time.</p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card media-card reveal">
+                            <img alt="EV charger and electric vehicle energy connection" loading="lazy"
+                                src="https://images.pexels.com/photos/9799726/pexels-photo-9799726.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Energy</span>
+                                <h3>kWh delivered</h3>
+                                <p class="muted">Know exactly how much energy reached your vehicle.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal">
+                            <img alt="Electric vehicle charging infrastructure" loading="lazy"
+                                src="https://images.pexels.com/photos/9799734/pexels-photo-9799734.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Speed</span>
+                                <h3>Charging rate</h3>
+                                <p class="muted">See whether your current session is delivering expected power.</p>
+                            </div>
+                        </article>
+                        <article class="card media-card reveal">
+                            <img alt="EV charging station technology" loading="lazy"
+                                src="https://images.pexels.com/photos/9799757/pexels-photo-9799757.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840" />
+                            <div class="media-copy">
+                                <span class="tag">Cost</span>
+                                <h3>Spend tracking</h3>
+                                <p class="muted">Keep the running cost visible throughout your session.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. APP CONFIDENCE / DASHBOARD (SPLIT) -->
+            <section class="section" style="background: var(--surface2); padding: 50px 0;">
+                <div class="container split">
+                    <div class="img-box reveal" style="border: none; box-shadow: none; background: transparent;">
+                        <img alt="Electric vehicle connected to charging equipment" loading="lazy"
+                            src="https://images.pexels.com/photos/9800092/pexels-photo-9800092.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840"
+                            style="border-radius: 25px; box-shadow: var(--shadow); border: 1px solid var(--line);" />
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">Account</span>
+                        <h2 style="margin-top:10px">Everything you need after charging</h2>
+                        <p class="muted" style="margin-bottom: 20px;">Manage your entire EV charging lifestyle directly
+                            from your driver dashboard.</p>
+                        <ul class="feature-list" style="display: flex; flex-direction: column; gap: 15px;">
+                            <li>
+                                <i class="fa-solid fa-file-invoice" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Charging history & receipts</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Download automated PDF
+                                        invoices for every session.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-credit-card" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Saved payment methods</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Securely store cards and UPI
+                                        for 1-click charging.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-bell" style="font-size: 1.5rem; width: 30px;"></i>
+                                <div>
+                                    <strong>Smart notifications</strong>
+                                    <p class="muted" style="font-size: 0.85rem; margin: 0;">Get alerted when your car
+                                        reaches its target charge.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. JOURNEY PLANNING (GRID-3 HORIZONTAL) -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">Confidence</span>
+                        <h2>Designed for the moment you plug in</h2>
+                        <p>Important information is prioritized so the active charging state remains calm and readable.
+                        </p>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">⚡</div>
+                            <div>
+                                <h3>Charging confirmed</h3>
+                                <p class="muted">Instant visual feedback tells you when energy flow has started.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🔋</div>
+                            <div>
+                                <h3>Battery progress</h3>
+                                <p class="muted">Follow progress toward the target without digging through screens.</p>
+                            </div>
+                        </article>
+                        <article class="card emoji-card reveal">
+                            <div class="emoji">🧾</div>
+                            <div>
+                                <h3>Cost clarity</h3>
+                                <p class="muted">Session charges remain visible before the final receipt.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CTA / READY (GRID-2 + GALLERY) -->
+            <section class="section" style="padding-bottom: 60px;">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="card reveal"
+                            style="display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, var(--brand), var(--brand2)); color: #fff; border: none; padding: 40px;">
+                            <span class="eyebrow"
+                                style="background: rgba(0,0,0,0.15); border: none; color: #fff; width: fit-content;">Ready</span>
+                            <h2 style="margin-top:15px; color: #fff;">Your next charge is only a few taps away</h2>
+                            <p style="opacity: 0.9; margin-bottom: 25px;">Use the driver dashboard to find a station,
+                                start a session and review your latest billing activity.</p>
+                            <a class="btn" href="#login"
+                                style="background: #fff; color: #0b1b15; width: fit-content;">Login to continue</a>
+                        </div>
+                        <div class="img-box reveal" style="border: none;">
+                            <img alt="Electric vehicle charging in a modern environment" loading="lazy"
+                                src="https://images.pexels.com/photos/36742999/pexels-photo-36742999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=3840"
+                                style="height: 100%; border-radius: var(--radius);" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer" id="siteFooter">
+        <div class="container footer-grid">
+            <div><a class="brand" href="#home1"><span class="logo"><i
+                            class="fa-solid fa-bolt"></i></span><span>VoltGrid</span></a>
+                <p>VoltGrid is a public EV charging network concept focused on fast station discovery, simple charging
+                    sessions, transparent payments and organized billing for drivers.</p>
+                <div class="social-row"><a aria-label="Facebook" class="social-icon fb" href="https://www.facebook.com/"
+                        rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a
+                        aria-label="Instagram" class="social-icon ig" href="https://www.instagram.com/" rel="noopener"
+                        target="_blank"><i class="fa-brands fa-instagram"></i></a><a aria-label="LinkedIn"
+                        class="social-icon li" href="https://www.linkedin.com/" rel="noopener" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a><a aria-label="X" class="social-icon x"
+                        href="https://x.com/" rel="noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="#home1">Home 1</a><br /><a href="#home2" class="active">Home 2</a><br /><a href="#about">About</a><br /><a
+                        href="#services">Services</a></p>
+            </div>
+            <div>
+                <h3>Driver</h3>
+                <p><a href="#login">Login</a><br /><a href="#dashboard">Dashboard</a><br /><a
+                        href="#contact">Support</a></p>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <p><a href="#">Privacy Policy</a><br /><a href="#">Terms of Service</a><br /><a href="#">Cookie Policy</a></p>
+            </div>
+        </div>
+        <div class="container center"
+            style="border-top:1px solid var(--line);margin-top:22px;padding-top:16px;color:var(--muted);font-size:.78rem">
+            © 2026 VoltGrid. Demo website — connect your production authentication, station APIs and payment gateway
+            before launch.</div>
+    </footer>
+    <button aria-label="Move to top" class="top-btn" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
